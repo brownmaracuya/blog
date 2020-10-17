@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Конфигурация i3 под ноутбук: как поднять производительность до 100%?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <!-- <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        </nav> -->
+    </header>
+
+    <h1 class="content_header">Конфигурация i3 под ноутбук: как поднять производительность до 100%?</h1>
+    <div class="container"><ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-"> Операционная система </a></li>
+<li class="toc-entry toc-h1"><a href="#-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BE%D0%BA%D0%BE%D0%BD"> Менеджер окон</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE%D1%87%D0%BA%D1%83">Разбираем установочку</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#какие-пакеты-для-чего-нужны">Какие пакеты для чего нужны?</a></li>
+<li class="toc-entry toc-h3"><a href="#конфигурируем-i3">Конфигурируем i3</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#что-получилось">Что получилось?</a></li>
+</ul>
+</li>
+</ul><p>Недавно я понял, что мой ноутбук недостаточно производителен. Ему не хватает мощности вывезти всё вместе: Vim (+ 20 плагинов), VSCode (+ столько же расширений), Google Chrome (+ 20 вкладок) и так далее. Казалось бы, обычная проблема на ноутбуках с 4 ГБ ОЗУ, однако я не стал сдаваться. Я люблю ноутбуки за их компактность, а также за то, что они могут работать на батарее где угодно. Мне нужно было просто подумать, как освободить лишнюю ОЗУ, а также увеличить энергоэффективность.</p>
+
+<p><img src="https://habrastorage.org/webt/za/im/iz/zaimiz9qe70tbtpjbyqul5-rgs8.jpeg"></p>
+
+<cutoff></cutoff>
+
+<hr>
+
+<blockquote>
+  <p>Если вам нужны сразу конфиги, то пролистывайте вниз к разделу “Разбираем установочку”</p>
+</blockquote>
+
+<h1>
+<a class="anchor" href="#-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-" aria-hidden="true"><span class="octicon octicon-link"></span></a> Операционная система </h1>
+<p>Так как мне нужна ОС, которая будет жрать наименьшее количество ОЗУ и батареи, я выбрал <strong>Arch Linux</strong>. Классика, ничего нового. Его репозитории позволят мне автоматизировать кучу ненужной работы, а <em><a href="https://aur.archlinux.org/">AUR</a> </em> позволит сократить ещё больше времени.</p>
+
+<h1>
+<a class="anchor" href="#-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80-%D0%BE%D0%BA%D0%BE%D0%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a> Менеджер окон</h1>
+<p>Я решил взять именно менеджер окон, а не полноценное окружение. Хоть мне и нравятся кеды (KDE), но они все равно кушают достаточно много из-за того, что они подтягивают за собой много библиотек и зависимостей. Ну и сама по себе DE’шка жрёт много из-за всяких ненужных виджетов.
+<img src="https://habrastorage.org/webt/br/hi/gx/brhigxphmrzwphfktt5vjkv_q2w.jpeg"></p>
+
+<hr>
+
+<h2>
+<a class="anchor" href="#%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE%D1%87%D0%BA%D1%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>Разбираем установочку</h2>
+<p>Для начала нам нужно установить все основные пакеты (нужно же нам что-то конфигурировать)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-Sy</span> <span class="nt">--noconfirm</span> i3 i3-gaps base-devel rofi okular feh vim code picom kitty ranger git xdotool xautolock i3lock-color scrot imagemagick rxvt-unicode urxvt-perls
+</code></pre></div></div>
+
+<p><strong>Вот примерная схема, как всё будет работать</strong></p>
+
+<p><img src="https://habrastorage.org/webt/_a/fy/zg/_afyzgb5qfp_mhp1w1flx_ahu9s.png" alt=""></p>
+
+<h3 id="какие-пакеты-для-чего-нужны">
+<a class="anchor" href="#%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-%D1%87%D0%B5%D0%B3%D0%BE-%D0%BD%D1%83%D0%B6%D0%BD%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Какие пакеты для чего нужны?</h3>
+<p>| Пакет        | Для чего нужен                                                                                                  |
+| ———— | ————————————————————————————————————— |
+| xwinwrap     | Нужен для установки файлов с расширением .gif в виде анимированных обоев                                        |
+| polybar      | Нужен для того, чтобы в менеджере окон отображался топбар                                                       |
+| i3           | Сам оконный менеджер                                                                                            |
+| i3-gaps      | Расширение для оконного менеджера                                                                               |
+| base-devel   | Компоненты необходимые для установки polybar                                                                    |
+| rofi         | Программа для запуска приложений                                                                                |
+| okular       | Программа для просмотра документов                                                                              |
+| zathura      | Программа для просмотра документов (поддерживает не так много расширений, однако более минималистичная)         |
+| feh          | Программа для просмотра картинок, а также для установки фоновых изображений                                     |
+| vim          | Основной редактор                                                                                               |
+| code         | Дополнительный редактор                                                                                         |
+| picom        | Композитор (программа которая создает тени, прозрачность, блюрит фон)                                           |
+| kitty        | Основной терминал                                                                                               |
+| urxvt        | Дополнительный терминал                                                                                         |
+| ranger       | Файловый менеджер                                                                                               |
+| git          | Система контроля версий                                                                                         |
+| xdotool      | Утилита, которая поможет при разработке скриптов и взаимодействии с окнами                                      |
+| xautolock    | Утилита, которая блокирует компьютер при бездействии и запускает i3-lock                                        |
+| i3lock-color | Улучшенная версия i3lock. Программа нужна для блокировки компьютера и ввода пароля                              |
+| scrot        | Минималистиченое приложение для создания скриншотов                                                             |
+| imagemagick  | Программа, которая поможет при взаимодействии с картинками (блюрит их заранее, конвертирует, меняет разрешение) |</p>
+
+<h3 id="конфигурируем-i3">
+<a class="anchor" href="#%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC-i3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Конфигурируем i3</h3>
+<p><strong>i3</strong> - Оконный менеджер, который не потребляет много ресурсов, тем самым, он будет полезен нам для того, чтобы “эмулировать” другие обычные оконные менеджеры. (<em>В подарок конечно же идёт тилинг - способность оконного менеджера раскрывать приложения на всю свободную часть экрана</em>)</p>
+
+<p>Я буду приводить конфиг <strong>i3</strong> по частям, для того, чтобы даже новички всё поняли. Начнём с самого главного - кнопка <em>$Mod</em>. Она служит для того, чтобы взаимодействовать с <strong>i3</strong>. Через неё будут проходить все основные хоткеи.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">### Tweaks ###</span>
+<span class="c"># Set main key (Win)</span>
+<span class="nb">set</span> <span class="nv">$mod</span> Mod4
+</code></pre></div></div>
+
+<p>Далее научим наш оконный менеджер двигать окна мышью при нажатии <code class="language-plaintext highlighter-rouge">$mod</code></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Press MOD key and click on mouse to move your window</span>
+floating_modifier <span class="nv">$mod</span>
+
+<span class="c"># Focus doesn't follow the mouse</span>
+focus_follows_mouse no
+</code></pre></div></div>
+
+<p>Установим шрифты для наших приложений, а также для приложений, которые зависят от <strong>i3</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Fonts</span>
+font pango: JetBrains Mono 10
+</code></pre></div></div>
+
+<p>Моей задумкой было сделать все окна изначально <em>летающими</em> (что, как оказалось, очень удобно). Для пояснения: в <strong>i3</strong> есть много видов <em>стыковки</em> окон (Tilling, Fullscreen, Tabbed, Float, Stacking), все они удобны в различных ситуациях, однако я не вижу смысла делать <strong>все</strong> окна заполняющими весь экран. Пусть лучше они заполняют его при нажатии <code class="language-plaintext highlighter-rouge">$mod + f</code>, а висят в воздухе по умолчанию, это я и сделал в следующем куске кода:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Maximum width for floating windows</span>
+floating_minimum_size 400 x 350
+floating_maximum_size 1800 x 900
+
+<span class="c"># (1920 - 10)/2 and (1080 - 10)/2</span>
+for_window <span class="o">[</span><span class="nv">class</span><span class="o">=</span><span class="s2">".*"</span><span class="o">]</span> floating <span class="nb">enable
+</span>for_window <span class="o">[</span><span class="nv">class</span><span class="o">=</span><span class="s2">".*"</span><span class="o">]</span> resize <span class="nb">set </span>955 535
+for_window <span class="o">[</span><span class="nv">class</span><span class="o">=</span><span class="s2">".*"</span><span class="o">]</span> focus
+</code></pre></div></div>
+<blockquote>
+  <p>Для того, чтобы вы не путались выражение <code class="language-plaintext highlighter-rouge">(1920 - 10)/2 and (1080 - 10)/2</code> означает что каждое окно будет занимать четверть экрана, а также будет отступ (друг от друга) ровно в 5 пикселей (5 со всех сторон).</p>
+</blockquote>
+
+<p>Далее давайте забиндим все основные приложения. Все хоткеи стараются соответствовать данной схеме</p>
+
+<p><img src="https://habrastorage.org/webt/s4/4m/ev/s44mevo_27gvaxx8-090pf4iikk.png" alt=""></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## Keyboard Settings ##</span>
+<span class="c"># Apps</span>
+bindsym <span class="nv">$mod</span>+Return <span class="nb">exec </span>kitty
+bindsym <span class="nv">$mod</span>+Mod1+r <span class="nb">exec</span> <span class="s2">"kitty sh -c 'ranger'"</span>
+bindsym <span class="nv">$mod</span>+Mod1+g <span class="nb">exec </span>google-chrome-stable
+bindsym <span class="nv">$mod</span>+Mod1+c <span class="nb">exec </span>code
+bindsym <span class="nv">$mod</span>+Mod1+v <span class="nb">exec </span>dolphin
+bindsym Print <span class="nb">exec </span>spectacle
+</code></pre></div></div>
+
+<p>Также, забиндим все основные функции, которые мы выполняем не думая, и которые обязательно должны быть</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># System / Volume</span>
+bindsym XF86AudioMute <span class="s2">"exec amixer -D pulse sset Master toggle &amp;&amp; notify-send </span><span class="se">\"</span><span class="s2">Volume</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">Sound is (un)muted</span><span class="se">\"</span><span class="s2"> --urgency low"</span>
+bindsym XF86AudioRaiseVolume <span class="s2">"exec amixer -D pulse sset Master 5%+ &amp;&amp; notify-send </span><span class="se">\"</span><span class="s2">Volume</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">Volume added +5%</span><span class="se">\n</span><span class="s2">    Volume level is now </span><span class="si">$(</span>amixer <span class="nt">-D</span> pulse get Master | <span class="nb">awk</span> <span class="nt">-F</span> <span class="s1">'Left:|[][]'</span> <span class="s1">'BEGIN {RS=\"\"}{ print $3 }'</span><span class="si">)</span><span class="se">\"</span><span class="s2"> --urgency low"</span>
+bindsym XF86AudioLowerVolume <span class="s2">"exec amixer -D pulse sset Master 5%- &amp;&amp; notify-send </span><span class="se">\"</span><span class="s2">Volume</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">Volume added -5%</span><span class="se">\n</span><span class="s2">    Volume level is now </span><span class="si">$(</span>amixer <span class="nt">-D</span> pulse get Master | <span class="nb">awk</span> <span class="nt">-F</span> <span class="s1">'Left:|[][]'</span> <span class="s1">'BEGIN {RS=\"\"}{ print $3 }'</span><span class="si">)</span><span class="se">\"</span><span class="s2"> --urgency low"</span>
+
+
+<span class="c"># System / Brightness</span>
+bindsym XF86MonBrightnessDown <span class="nb">exec </span>xbacklight <span class="nt">-dec</span> 5
+bindsym XF86MonBrightnessUp <span class="nb">exec </span>xbacklight <span class="nt">-inc</span> 5
+
+<span class="c"># Moving from one window to another</span>
+bindsym <span class="nv">$mod</span>+h focus left
+bindsym <span class="nv">$mod</span>+j focus down
+bindsym <span class="nv">$mod</span>+k focus up
+bindsym <span class="nv">$mod</span>+l focus right
+
+<span class="c"># Choose one of your workspaces</span>
+bindsym <span class="nv">$mod</span>+1 workspace <span class="nv">$workspace1</span>
+bindsym <span class="nv">$mod</span>+2 workspace <span class="nv">$workspace2</span>
+bindsym <span class="nv">$mod</span>+3 workspace <span class="nv">$workspace3</span>
+bindsym <span class="nv">$mod</span>+4 workspace <span class="nv">$workspace4</span>
+
+<span class="c"># Move window to the workspace</span>
+bindsym <span class="nv">$mod</span>+Shift+1 move container to workspace <span class="nv">$workspace1</span>
+bindsym <span class="nv">$mod</span>+Shift+2 move container to workspace <span class="nv">$workspace2</span>
+bindsym <span class="nv">$mod</span>+Shift+3 move container to workspace <span class="nv">$workspace3</span>
+bindsym <span class="nv">$mod</span>+Shift+4 move container to workspace <span class="nv">$workspace4</span>
+
+<span class="c">## Floating manipulation ##</span>
+<span class="c"># Make window floating</span>
+bindsym <span class="nv">$mod</span>+f floating toggle
+<span class="c"># Change focus</span>
+bindsym <span class="nv">$mod</span>+Shift+f focus mode_toggle
+
+<span class="c"># Move windows</span>
+bindsym <span class="nv">$mod</span>+Shift+h move left 20px
+bindsym <span class="nv">$mod</span>+Shift+j move down 20px
+bindsym <span class="nv">$mod</span>+Shift+k move up 20px
+bindsym <span class="nv">$mod</span>+Shift+l move right 20px
+
+<span class="c"># Resizing Windows</span>
+bindsym <span class="nv">$mod</span>+Ctrl+l resize shrink width 10 px or 10 ppt
+bindsym <span class="nv">$mod</span>+Ctrl+k resize grow height 10 px or 10 ppt
+bindsym <span class="nv">$mod</span>+Ctrl+j resize shrink height 10 px or 10 ppt
+bindsym <span class="nv">$mod</span>+Ctrl+h resize grow width 10 px or 10 ppt
+
+<span class="c"># Make window fullscreen</span>
+bindcode 95 fullscreen toggle
+
+<span class="c"># Reload Configuration</span>
+bindsym <span class="nv">$mod</span>+p reload
+
+<span class="c"># Kill a window</span>
+bindsym <span class="nv">$mod</span>+x <span class="nb">exec </span>xdotool getwindowfocus windowkill
+</code></pre></div></div>
+
+<p>Сделаем секцию автостарта</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">### Autostart ###</span>
+<span class="c"># Lockscreen after 10min delay</span>
+<span class="nb">exec</span> <span class="nt">--no-startup-id</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.config/i3/lockscreen"</span>
+<span class="c"># Convert background gif to jpg</span>
+<span class="nb">exec</span> <span class="nt">--no-startup-id</span> convert <span class="nt">-verbose</span> <span class="nv">$HOME</span>/.config/i3/<span class="o">{</span>gif.gif,gif.jpg<span class="o">}</span>
+<span class="c"># Generate Colorscheme</span>
+exec_always <span class="nt">--no-startup-id</span> wal <span class="nt">-i</span> <span class="nv">$HOME</span>/.config/i3/gif-0.jpg
+<span class="c"># Compositor</span>
+exec_always <span class="nt">--no-startup-id</span> <span class="s2">"killall -q picom; picom --config </span><span class="nv">$HOME</span><span class="s2">/.config/picom.conf"</span>
+<span class="c"># Language</span>
+<span class="nb">exec</span> <span class="nt">--no-startup-id</span> setxkbmap <span class="nt">-model</span> pc105 <span class="nt">-layout</span> us,ru <span class="nt">-option</span> grp:win_space_toggle
+<span class="c"># Dunst</span>
+<span class="nb">exec</span> <span class="nt">--no-startup-id</span> dunst
+<span class="c"># Kitty</span>
+<span class="nb">exec </span>kitty
+<span class="c"># Dropbox</span>
+<span class="nb">exec</span> <span class="nt">--no-startup-id</span> dropbox &amp;
+<span class="c"># Polybar</span>
+exec_always <span class="nt">--no-startup-id</span> <span class="nv">$HOME</span>/.config/polybar/launch.sh
+<span class="c"># Cursor</span>
+exec_always <span class="nt">--no-startup-id</span> xsetroot <span class="nt">-cursor_name</span> left_ptr
+</code></pre></div></div>
+
+<p><strong>i3-gaps</strong> - сборка i3, которая добавляет много новых функций. Одной из них является добавление отступов (gaps), которые визуально выглядят очень хорошо.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">### i3-gaps ###</span>
+<span class="c"># Borders for windows</span>
+for_window <span class="o">[</span><span class="nv">class</span><span class="o">=</span><span class="s2">".*"</span><span class="o">]</span> border pixel 5
+
+<span class="c"># Gaps for i3bar</span>
+for_window <span class="o">[</span><span class="nv">class</span><span class="o">=</span><span class="s2">"i3bar"</span><span class="o">]</span> gaps outer current <span class="nb">set </span>10
+
+<span class="c"># Gaps</span>
+gaps inner 10
+gaps outer 4
+
+
+<span class="c">### Topbar and color theme ###</span>
+<span class="c"># Color theme of borders</span>
+client.focused              <span class="c">#bf616a #2f343f #d8dee8 #bf616a #d8dee8</span>
+client.focused_inactive     <span class="c">#2f343f #kf343f #d8dee8 #2f343f #2f343f</span>
+client.unfocused            <span class="c">#2f343f #2f343f #d8dee8 #2f343f #2f343f</span>
+client.urgent               <span class="c">#2f343f #2f343f #d8dee8 #2f343f #2f343f</span>
+client.placeholder          <span class="c">#2f343f #2f343f #d8dee8 #2f343f #2f343f</span>
+client.background           <span class="c">#2f343f</span>
+</code></pre></div></div>
+
+<h2 id="что-получилось">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D0%BB%D0%BE%D1%81%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что получилось?</h2>
+<p>А получилась довольно минималистичная сборка на i3, которая очень шустро работает на ноутбуках и даёт неплохие показатели</p>
+
+<p><img src="https://habrastorage.org/webt/p9/fe/8s/p9fe8s6lim52xc_pyxx-yj8sq6o.png" alt=""></p>
+
+<blockquote>
+  <p>Так как конфигураций я написал ещё очень много (что отлично видно на скриншоте) их можно найти в репозитории <a href="https://github.com/us3rn4me-profile/GreatI3">Great i3</a>.</p>
+</blockquote>
+
+<p>Ещё пару скриншотов</p>
+
+<p><img src="https://habrastorage.org/webt/y0/ry/f_/y0ryf_4_wzhvhfg1dw_bhcarus0.png" alt=""></p>
+
+<p><img src="https://habrastorage.org/webt/2n/kd/ws/2nkdws06uqfunrzsnqdyquxorvo.png" alt=""></p>
+
+<p><img src="https://habrastorage.org/webt/bq/n5/mq/bqn5mq_qac0cpioonu0aq1k-uua.png" alt=""></p>
+</div>
+    <footer class="content_footer">
+      <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
+    </footer>
+
+    <!-- Buttons -->
+    <a href="/index.html">
+      <img class="bttn-home" src="/assets/img/bttn-home.png" alt="" />
+    </a>
+    <img
+      class="bttn-up"
+      onclick="scroll(0, 0);"
+      src="/assets/img/bttn-up.png"
+      alt=""
+    />
+    <img class="bttn-moon" src="/assets/img/bttn-moon.png" alt="" />
+    <script src="/js/bttns.js"></script>
+  </body>
+</html>

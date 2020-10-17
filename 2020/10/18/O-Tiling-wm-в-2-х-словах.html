@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>O Tiling-wm в 2-х словах</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <!-- <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        </nav> -->
+    </header>
+
+    <h1 class="content_header">O Tiling-wm в 2-х словах</h1>
+    <div class="container"><p>Немного расскажу о моем опыте использования тайловых менеджеров окон, а также рассмотрим кратко плюсы и минусы, которые я нашёл за 3 месяца использования.</p>
+
+<h1 id="вкратце">Вкратце</h1>
+<p>Я использовал bspwm, awesome и i3 из тайловых менеджеров окон. Самым удобным оказался bspwm. Его буквально можно поставить на ПК и он уже настроен.</p>
+
+<p>Опыт перехождения с мышки на клавиатуру и только был болезненный. Во всех трех менеджерах можно использовать мышь, однако делать этого незачем, ибо с мышью прекрасно справляются KDE, Gnome, XFCE, Cinnamon и многие другие DE.</p>
+
+<p><strong>Плюсы и минусы</strong>:</p>
+<h5 id="i3">i3</h5>
+<p>+ Гибконастраиваемый
++ Легковесный
++ Вся конфигурация в одном файле (<em>хотя, этот плюс, конечно же субъективный</em>)
++ Правила расположения окон можно настроить очень гибко
++ Очень хорошая документация</p>
+
+<p>- Оригинальный i3 не такой уж и гибкий, как его форк <a href="https://github.com/Airblader/i3">i3-gaps</a>
+- Изначально поставляется просто как пустой экран с dmenu (пакет из suckless-tools)</p>
+
+<p>Скриншоты:</p>
+
+<p><img src="https://habrastorage.org/webt/zu/bq/nl/zubqnl7yvwxzm_zuy487hd31sye.jpeg" alt="" /></p>
+
+<p><img src="https://habrastorage.org/webt/ep/ou/o0/epouo0filjvlyrkd3gu0ygggbda.jpeg" alt="" /></p>
+
+<p><a href="https://github.com/Username77177/dotfiles">Моя конфигурация i3</a></p>
+
+<h5 id="bspwm">bspwm</h5>
+
+<p>+ Конфигурация может быть написана на любом скриптовом языке. По сути конфигурация - просто набор последовательных правил. Сам же bspwm может быть настроен с помощью bspc
++ Bspc содержит мануал с краткими выкладками и примерами
++ Отступы между окнами присутствуют по умолчанию в отличии от i3
++ Настройка горячих клавиш производится с помощью отдельной программы sxhkd. Все горячие клавиши могут быть перенесены на другой WM</p>
+
+<p>- Нет нормальной документации (только мануал)
+- Нужно докачивать программы по типу rofi, dmenu, alacritty (или любого другого терминала) и так далее, т.к. без них bspwm <strong>вообще ничего не показывает</strong>
+- Может чуть больше нагружать систему, чем i3 из-за дополнительных утилит</p>
+
+<p><a href="https://github.com/Username77177/bspwm-ground-config">Моя конфигурация bspwm</a></p>
+
+<h5 id="awesome">awesome</h5>
+
+<p>+ Хорошо задокументирован
++ Вся конфигурация на языке Lua
++ Очень гибкий
++ Все утилиты нужные для работы идут в комплекте. Не нужно ничего докачивать
++ Нормально обращается с мышью
++ Отступы между окнами присутствуют (привет, i3)</p>
+
+<p>- Обязательное знание Lua
+- Немного больше нагружает систему, чем bspwm</p>
+
+<h1 id="личное-мнение">Личное мнение</h1>
+<p>Мне лично по душе bspwm. Он лёгкий в конфигурации, над ним не нужно много работать, всё уже готово.</p>
+
+<p>Скриншоты:</p>
+
+<p><img src="https://habrastorage.org/webt/1g/oj/a8/1goja8i12nnsfgmuomisldurjqq.png" alt="" /></p>
+
+<p><img src="https://habrastorage.org/webt/d5/bu/ya/d5buyan8btyiasceq0kj0mck-gs.png" alt="" /></p>
+
+<p><img src="https://habrastorage.org/webt/dh/sy/6w/dhsy6wsqr3_ldqi2vj3bnixi-s0.png" alt="" /></p>
+
+<p><img src="https://habrastorage.org/webt/jz/sc/vk/jzscvkbgym0so_tpomwmdzrpyjo.png" alt="" /></p>
+
+<h2 id="upd">UPD:</h2>
+<p>Собрал все репозитории с конфигурационными файлами
+<a href="https://github.com/Username77177/dotfiles">Репозиторий, где я собирал конфиг i3/bspwm</a>
+<a href="https://github.com/Username77177/Configurations">Репозиторий, где я собирал конфиг под терминал,  tmux, и другое</a>
+<a href="https://github.com/Username77177/bspwm-ground-config">Репозиторий, отведённый чисто для bspwm</a></p>
+</div>
+    <footer class="content_footer">
+      <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
+    </footer>
+
+    <!-- Buttons -->
+    <a href="/index.html">
+      <img class="bttn-home" src="/assets/img/bttn-home.png" alt="" />
+    </a>
+    <img
+      class="bttn-up"
+      onclick="scroll(0, 0);"
+      src="/assets/img/bttn-up.png"
+      alt=""
+    />
+    <img class="bttn-moon" src="/assets/img/bttn-moon.png" alt="" />
+    <script src="/js/bttns.js"></script>
+  </body>
+</html>

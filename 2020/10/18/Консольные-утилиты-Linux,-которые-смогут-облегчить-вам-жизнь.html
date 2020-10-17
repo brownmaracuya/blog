@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Консольные утилиты Linux, которые смогут облегчить вам жизнь</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <!-- <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        </nav> -->
+    </header>
+
+    <h1 class="content_header">Консольные утилиты Linux, которые смогут облегчить вам жизнь</h1>
+    <div class="container"><p>Немного о утилитах на консоли, которые знают немногие, однако они могут быть полезны как для начинающего джуна, так и для крепкого сеньора.</p>
+
+<h1 id="почему-стоит-написать-об-этом">Почему стоит написать об этом</h1>
+<p>Написать о утилитах (прежде всего консольных) стоит из-за того, что я вижу, как многие люди не используют мощность консоли на все 100%. Многие ограничиваются простым созданием файлов, а также переходом между директориями, работая в консоли. Я считаю что это следствие того, что в рунете мало источников, где бы могли нормально рассказать о утилитах, как на них работать, и что они делают.
+Оценивать утилиты мы будем по 5-бальной шкале. Сделано это для того, чтобы вы сразу могли понять, где на мой субъективный взгляд, одна утилита на голову выше другой. Я не призываю использовать что-то определенное, или использовать <strong>только командные утилиты</strong>. Нет, наоборот, я просто даю вам выбор. Пользоваться или нет полученными знаниями, на которые я потратил кучу времени - дело ваше.</p>
+
+<p>Я сразу хочу сказать, что в этом посте присутствуют утилиты, которые понадобились непосредственно мне при разработке. Если у вас есть свои предложения как дополнить этот список, милости прошу в комментарии.</p>
+
+<h1 id="перейдем-к-списку">Перейдем к списку</h1>
+
+<h2 id="передвижение-по-директориям">Передвижение по директориям</h2>
+
+<h3 id="vifm">ViFM</h3>
+<p><img src="https://habrastorage.org/webt/sh/jp/m3/shjpm3d_3nsxvrke-yohk2g7hcw.png" alt="" /></p>
+
+<p><a href="https://github.com/vifm/vifm">ViFM</a> - vim-подобный файловый менеджер, который способен быстро переходить между директориями и выполнять какие-либо операции с файлами и директориями посредством ввода команд или хоткеев. По умолчанию представляет из себя две панели (чёрную и белую) между которыми вы можете переключаться.</p>
+
+<p><em>Оценка: 3, ибо для того чтобы пользоваться этим ФМ, вам нужно будет выучить кучу vim-подобных команд, а также знать хоткеи vim’а</em></p>
+
+<h3 id="mc">mc</h3>
+<p><img src="https://habrastorage.org/webt/n3/rv/8k/n3rv8k61fmkxdwet8iat1vybbn8.png" alt="" /></p>
+
+<p><a href="https://midnight-commander.org/">mc</a> (Midnight Commander) - классика в Linux’e. С помощью него вы сможете также быстро перемещаться между директориями, менять права доступа, открывать файлы с помощью встроенного редактора, а также многое другое. В программу встроен довольно понятный интерфейс, где внизу находятся хоткеи, а вверху две панели (между которыми вы переключаетесь с помощью клавиши Tab).</p>
+
+<p><em>Оценка : 5. Это то, что нужно новичку, и подходит продвинутому пользователю. Вам не нужны никакие предварительные знания, чтобы полноценно использовать этот ФМ.</em></p>
+
+<h3 id="ranger">Ranger</h3>
+<p><img src="https://habrastorage.org/webt/5g/rr/zz/5grrzzp4wmlajxit9dxysnhbjwk.png" alt="" /></p>
+
+<p><a href="https://github.com/ranger/ranger">Ranger</a> - ещё один ФМ с вим-подобной раскладкой. Однако, на этот раз утилита написана на Python, что делает её медленнее, но в то же время чертовски гибкой и удобной. Вы можете открывать файлы сразу из менеджера с помощью rifle (сценарий, который ищет какая программа подойдет для открытия данного файла на вашем ПК). Также доступно редактирование, просмотр быстрых клавиш (отдельно от мануала, который вызывается командой :help), и много других плюшек.</p>
+
+<p><em>Оценка: 4. Было бы 5, если бы не скорость работы</em></p>
+
+<h2 id="быстрый-поиск">Быстрый поиск</h2>
+
+<p>Быстрый поиск не доступен на оболочке Gnome, например. (<em>Здесь говорится о быстром поиске включая содержимое файлов. Gnome же обладает просто поиском, причем ещё и очень медленным</em>)</p>
+
+<h3 id="fzf">fzf</h3>
+<p><img src="https://habrastorage.org/webt/xi/0z/cy/xi0zcy_nc3irvaptrk8z0rkplyo.png" alt="" /></p>
+
+<p><a href="https://github.com/junegunn/fzf">fzf (FuzzyFinder)</a> - утилита для быстрого поиска среди директорий, а также текста в определенном массиве файлов. Она может быть легко заменена на find, однако является его более быстрым и удобным аналогом.</p>
+
+<p><em>Оценка: 5. Утилита отлично выполняет свою работу.</em></p>
+
+<h3 id="hf">hf</h3>
+<p><a href="https://github.com/hugows/hf">hf (happyfinder)</a> - ещё одна утилита для быстрого поиска в директориях и файлах. Отличается тем, что доступны также некоторые хоткеи и использование команд в самой утилите реализовано чуточку удобнее, чем у конкурента</p>
+
+<p><em>Оценка: 5</em></p>
+
+<h3 id="autojump">autojump</h3>
+
+<p><a href="https://github.com/wting/autojump">autojump</a> - утилита для быстрого перепрыгивания через папки к определенному файлу.</p>
+
+<h2 id="редактирование">Редактирование</h2>
+
+<p>Тут я ограничюсь только списком утилит. Ибо редактор - то, чем вы пользуетесь постоянно (а если не пользуетесь, то тем более вам не нужны лишние объяснения), поэтому тут на вкус и цвет</p>
+
+<ul>
+  <li><a href="https://github.com/vim/vim">Vim</a></li>
+  <li><a href="https://github.com/neovim/neovim">NeoVim</a></li>
+  <li>Nano (стандартный редактор Linux)</li>
+  <li>Vi (ещё один стандартный редактор Linux)</li>
+  <li><a href="http://www.gnu.org/software/emacs/">Emacs</a></li>
+  <li><a href="https://github.com/zyedidia/micro">Micro</a></li>
+  <li><a href="https://github.com/mawww/kakoune">Kakoune</a></li>
+  <li><a href="https://github.com/hlissner/doom-emacs">Doom Emacs</a> (<em>просто конфигурация Emacs, однако изменяет его так, что это уже совсем не похоже на ванильный Emacs</em>)</li>
+</ul>
+
+<h2 id="сами-терминалы">Сами терминалы</h2>
+
+<h3 id="alacritty-самый-быстрый">Alacritty (самый быстрый)</h3>
+<p><img src="https://cloud.githubusercontent.com/assets/4285147/21585004/2ebd0288-d06c-11e6-95d3-4a2889dbbd6f.png" alt="" />
+<a href="https://github.com/alacritty/alacritty">Alacritty</a> - эмулятор терминала на Linux/Windows/MacOS, который считается самым быстрым (так пишет сам автор этого терминала)</p>
+
+<p><em>Оценка: 4. На мой субъективный взгляд - не самый удобный и комфортный терминал.</em></p>
+
+<h3 id="hyper-самый-красивый">Hyper (самый красивый)</h3>
+<p><img src="https://habrastorage.org/webt/iu/sf/2d/iusf2dx5bsnydpov1cydpew2lsa.png" alt="" /></p>
+
+<p><a href="https://hyper.is/">Hyper</a> - терминал, который заслуживает того, чтобы вы попробовали использовать его на своей системе. Его интерфейс сделан с помощью CSS/HTML, а базируется он на фреймворке Electron (что конечно же будет делать его немножко прожорливее)</p>
+
+<p><em>Оценка: 5. Терминал удобный и красивый. Он расширяемый и в нём есть куча фич.</em></p>
+
+<h2 id="быстрая-справка-или-поиск-чего-либо">Быстрая справка (или поиск чего-либо)</h2>
+
+<h3 id="ddgr">ddgr</h3>
+<p><img src="https://habrastorage.org/webt/yo/52/lw/yo52lwurk_0b42zq19xbrj4jf_8.png" alt="" /></p>
+
+<p><a href="https://github.com/jarun/ddgr">ddgr</a> - командная утилита, которая позволяет пользоваться DuckDuckGo прямо из консоли.</p>
+
+<p><em>Оценка: 5. Программа быстро выполняет запрос и отдаёт результаты (естественно, ибо не нужно прогружать HTML/CSS. Всё быстренько парсится)</em></p>
+
+<h3 id="tldr">tldr</h3>
+<p><img src="https://habrastorage.org/webt/9n/me/kl/9nmekljhzq4d5xtyaj2_tfgz2eg.png" alt="" /></p>
+
+<p><a href="https://github.com/tldr-pages/tldr">tldr</a> - замена стандартного man, который умеет всё тоже самое, однако вместо того, чтобы давать полный мануал к программе, она даёт краткие вырезки для быстрого использования</p>
+
+<p><em>Оценка: 4. Иногда tldr выдаёт уж слишком короткую справку, а также на многие программы просто нет документации в tldr</em></p>
+
+<h3 id="howdoi">howdoi</h3>
+
+<p><a href="https://github.com/gleitz/howdoi">howdoi</a> - парсит ответы с разных сайтов на вопросы о программировании.</p>
+
+<p><em>Оценка: 3. Часто находит ответы на совсем не те вопросы. Также крайне неудобно, что ответ выводится только один</em></p>
+
+<h3 id="navi">navi</h3>
+
+<p><a href="https://github.com/denisidoro/navi">navi</a> - консольная утилита, подобная howdoi, однако отвечающая сугубо на вопросы о командах консоли</p>
+
+<h3 id="how2">how2</h3>
+<p><a href="https://github.com/santinic/how2">how2</a> - утилита подобная howdoi, однако дающая выбор на какой вопрос посмотреть ответ. (Парсит всё с StackOverflow)</p>
+
+<p><em>Оценка: 5. Лучшая утилита для быстрого поиска решений</em></p>
+
+<h2 id="веб-разработка">Веб-разработка</h2>
+
+<p><a href="https://surge.sh/">Surge</a> - утилита для быстрого пуша сайтов на бесплатный (или платный, в зависимости от ваших требований) сервер</p>
+
+<p><a href="https://github.com/sgentle/caniuse-cmd">Caniuse</a> - консольная утилита, которая говорит какие теги поддерживаются в браузерах</p>
+
+<h2 id="дополнительные-утилиты">Дополнительные утилиты</h2>
+
+<h3 id="trash-cli">trash-cli</h3>
+
+<p><a href="https://github.com/sindresorhus/trash-cli">trash-cli</a> - утилита для просмотра того, что содержится в корзине</p>
+
+<h3 id="buku">buku</h3>
+
+<p><a href="https://github.com/jarun/Buku">buku</a> - утилита для быстрой сортировки и хранения закладок сайтов со всех браузеров.</p>
+
+<h3 id="tmux">tmux</h3>
+
+<p><a href="https://github.com/tmux/tmux">tmux</a> - терминальный мультиплексор. Делит окно вашего терминала на панели. Очень удобно, когда в вашем распоряжении нет GUI вообще.</p>
+
+<h3 id="text-meme-cli">text-meme-cli</h3>
+
+<p><a href="https://github.com/beatfreaker/text-meme-cli">text-meme-cli</a> - утилита для создания анимации текста на каком-либо фоне.</p>
+
+<h3 id="asciinema">asciinema</h3>
+
+<p><a href="https://github.com/asciinema/asciinema">asciinema</a> - утилита для записи хронологии команд терминала в гиф-файл.</p>
+
+<h3 id="youtube-dl">Youtube-dl</h3>
+
+<p><a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a> - утилита для скачивания видео/аудио с видеохостинга Youtube.</p>
+
+<h3 id="picofeed">picofeed</h3>
+
+<p><a href="https://github.com/seenaburns/picofeed">picofeed</a> - легкий RSS клиент для консолей</p>
+
+<h3 id="terminalnews">terminalnews</h3>
+
+<p><a href="https://github.com/antavelos/terminews">terminalnews</a> - ещё один удобный RSS-клиент для консоли.</p>
+
+<h1 id="а-что-за-список">А что за список?</h1>
+<p>Это список утилит, которые я использую сам лично. Дополнительный список вы можете найти здесь <a href="https://github.com/agarrharr/awesome-cli-apps#terminal-sharing-utilities">ссылка на репозиторий GitHub</a>
+Я настоятельно попрошу вас дополнить список своими утилитами в комментариях. Если этот пост принёс в ваш терминал хоть чуточку чего-нибудь нового - был рад посодействовать.</p>
+</div>
+    <footer class="content_footer">
+      <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
+    </footer>
+
+    <!-- Buttons -->
+    <a href="/index.html">
+      <img class="bttn-home" src="/assets/img/bttn-home.png" alt="" />
+    </a>
+    <img
+      class="bttn-up"
+      onclick="scroll(0, 0);"
+      src="/assets/img/bttn-up.png"
+      alt=""
+    />
+    <img class="bttn-moon" src="/assets/img/bttn-moon.png" alt="" />
+    <script src="/js/bttns.js"></script>
+  </body>
+</html>

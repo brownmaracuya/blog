@@ -1,0 +1,166 @@
+:root {
+  --bl: #1f1f20;
+  --wh: #f7f7f7;
+}
+
+.dark {
+  color: var(--wh);
+  background-color: var(--bl);
+}
+
+body {
+  transition: ease-in-out 0.5s;
+  font-size: calc(12px + 0.4vw);
+  font-family: Roboto, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: var(--wh);
+  color: var(--bl);
+}
+
+h1.content_header {
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", Geneva, Verdana, sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  line-height: 1.8em;
+  /* margin-top: 1.4rem; */
+}
+
+a {
+  color: #47dda3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #50ac82;
+}
+
+ul,
+ol {
+  margin: 1rem 0;
+}
+li {
+  margin: 0 0 1rem 0;
+  color: #5c7fc0;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 50vw;
+  padding-bottom: 1.2rem;
+}
+
+.content_footer {
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+}
+
+code {
+  font-size: 14px;
+  font-family: "Roboto Mono", monospace;
+  overflow: scroll;
+  color: #f8f8f2;
+}
+
+code.language-plaintext {
+  color: inherit;
+}
+pre {
+  overflow: auto;
+}
+
+img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+pre.highlight {
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.content_footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Buttons */
+.bttn-home {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.bttn-home:hover {
+  transition: ease-in-out 0.5s;
+  transform: rotate(360deg);
+}
+
+.bttn-up {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 100px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.bttn-up:hover {
+  transition: ease-in-out 0.7s;
+  transform: rotateY(360deg);
+}
+
+.bttn-moon {
+  position: fixed;
+  right: 100px;
+  bottom: 15px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 769px) {
+  .container {
+    max-width: 80vw;
+  }
+}
+
+/* TOC */
+ul.section-nav {
+  position: relative;
+  list-style-type: none;
+  background-color: #161414;
+  color: #f7f7f7;
+  border-radius: 10px;
+  padding: 30px 15px;
+}
+ul.section-nav ul {
+  list-style-type: none;
+}
+ul.section-nav::before {
+  content: "Оглавление";
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 1rem;
+}

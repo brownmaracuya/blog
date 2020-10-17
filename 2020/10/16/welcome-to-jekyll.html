@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Всё про SSH</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <!-- <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        </nav> -->
+    </header>
+
+    <h1 class="content_header">Всё про SSH</h1>
+    <div class="container"><p><strong>SSH</strong>- <strong>S</strong>ecure <strong>Sh</strong>ell. Он нужен для безопасного подключения между хостом (<em>компьютер, на котором будут производиться все действия. Его ещё называют сервер</em>) и клиентом (<em>компьютер, с которого будут производиться все действия. Его часто называют клиентом</em>).</p>
+
+<p>Дабы установить SSH (<em>для нас это клиент OpenSSH</em>), нужно выполнить следующую команду:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nb">sudo </span>pacman <span class="nt">-Sy</span> openssh
+<span class="c"># или</span>
+<span class="nb">sudo </span>dnf <span class="nb">install </span>openssh
+<span class="c"># или</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>openssh
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Клиент установлен. Теперь время настройки OpenSSH</p>
+
+<h2 id="настройки-для-клиента">Настройки для клиента</h2>
+
+<p>Настройки для клиента находятся в <code class="language-plaintext highlighter-rouge">/etc/ssh/ssh_config</code>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="c"># Для всех</span>
+Host <span class="k">*</span>
+<span class="c"># Порт по умолчанию</span>
+Port 2020
+<span class="c"># Запрещаю локальные команды</span>
+PermitLocalCommand no
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Для того, чтобы точно посмотреть какой аргумент что делает нужно написать <code class="language-plaintext highlighter-rouge">man ssh_config</code>.</p>
+
+<h2 id="настройка-сервера-ssh">Настройка сервера SSH</h2>
+
+<p>Настройки для сервера находятся в <code class="language-plaintext highlighter-rouge">/etc/ssh/sshd_config</code>. <strong>SSHd</strong>- <strong>S</strong>ecure <strong>Sh</strong>ell <strong>D</strong>aemon, это демон, который запускает сервер в фоновом режиме с конфигом, лежит по расположению описанному выше.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+</pre></td><td class="code"><pre><span class="c"># Порт</span>
+Port 2020
+<span class="c"># Время подключения</span>
+LoginGraceTime 1m
+<span class="c"># Логиниться в рут, только если есть пароль от него</span>
+PermitRootLogin prohibit-password
+<span class="c"># Максимальное число попыток входа</span>
+MaxAuthTries 3
+<span class="c"># Максимальное количество сессий</span>
+MaxSessions 2
+<span class="c"># Использовать ключ для входа</span>
+PubkeyAuthentication <span class="nb">yes</span>
+<span class="c"># Файл, в котором проверяются доверенные ключи</span>
+AuthorizedKeysFile .ssh/authorized_keys
+<span class="c"># Перенаправлять X</span>
+X11Forwarding no
+X11DisplayOffset 10
+X11UseLocalhost <span class="nb">yes</span>
+<span class="c"># Разрешить TTY</span>
+PermitTTY <span class="nb">yes
+</span>PrintMotd no <span class="c"># pam does that</span>
+<span class="c"># Принтить последнее вхождение</span>
+PrintLastLog <span class="nb">yes</span>
+<span class="c"># Баннер</span>
+Banner ~/.bannerForSSH
+<span class="c"># Разрешение подключаться с помощью пароля</span>
+PasswordAuthentication no
+PermitEmptyPasswords no
+<span class="c"># override default of no subsystems</span>
+Subsystem sftp /usr/lib/ssh/sftp-server
+
+<span class="c">#HostKey /etc/ssh/ssh_host_rsa_key</span>
+<span class="c">#HostKey /etc/ssh/ssh_host_ecdsa_key</span>
+<span class="c">#HostKey /etc/ssh/ssh_host_ed25519_key</span>
+<span class="c">#AuthorizedPrincipalsFile none</span>
+<span class="c"># Set this to 'yes' to enable PAM authentication, account processing,</span>
+<span class="c"># and session processing. If this is enabled, PAM authentication will</span>
+<span class="c"># be allowed through the ChallengeResponseAuthentication and</span>
+<span class="c"># PasswordAuthentication. Depending on your PAM configuration,</span>
+<span class="c"># PAM authentication via ChallengeResponseAuthentication may bypass</span>
+<span class="c"># the setting of "PermitRootLogin without-password".</span>
+<span class="c"># If you just want the PAM account and session checks to run without</span>
+<span class="c"># PAM authentication, then enable this but set PasswordAuthentication</span>
+<span class="c"># and ChallengeResponseAuthentication to 'no'.</span>
+UsePAM <span class="nb">yes</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Для того, чтобы точно посмотреть какой аргумент что делает нужно написать <code class="language-plaintext highlighter-rouge">man
+sshd_config</code>.</p>
+
+<h2 id="генерация-ключей">Генерация ключей</h2>
+
+<p>Доступ к серверу по паролю, хотя бы, просто не безопасен. Нам нужен ключ, с помощью которого только мы сможем подключаться к хосту. Чтобы взломать этот ключ,
+потребовалось бы около 1500 лет [Википедия].</p>
+
+<p>Для того, чтобы получить такой ключ, воспользуемся утилитой, которая уже идёт вместе с
+пакетом <strong>OpenSSH</strong>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>ssh-keygen <span class="nt">-t</span> rsa
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Далее называем наш файл и указываем путь к нему. По умолчанию это <code class="language-plaintext highlighter-rouge">~/.ssh/</code></p>
+
+<p><strong>Теперь внимательно</strong>: ключ с форматом <em>.pub</em> скидываем на сервер через физический
+доступ (флешка или другой накопитель) в папку .ssh, а также <em>предварительно</em>
+<em>переименовываем его в</em> authorized_keys</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="c">#Файл уже на сервере</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> ~/.ssh
+<span class="nb">cat </span>id_rsa.pub <span class="o">&gt;</span> ~/.ssh/authorized_keys
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Или делаем это всё командой (без физического доступа к серверу):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>ssh-copy-id <span class="nt">-i</span> ~/.ssh/id_rsa.pub servername@ip <span class="nt">-p</span> port
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><img src="/assets/img/mermaid-diagram-20201017060859.png" alt="" /></p>
+
+<p>Ключ <strong>без разрешения</strong>- ваш <em>приватный</em> ключ. Его не нужно никому отдавать. Он ваш.
+Распечатайте и положите под коврик у входа.
+После того, как вы скинули файл с разрешением <em>.pub</em> , вы можете спокойно использовать
+сервер.</p>
+
+<!-- Variables -->
+</div>
+    <footer class="content_footer">
+      <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
+    </footer>
+
+    <!-- Buttons -->
+    <a href="/index.html">
+      <img class="bttn-home" src="/assets/img/bttn-home.png" alt="" />
+    </a>
+    <img
+      class="bttn-up"
+      onclick="scroll(0, 0);"
+      src="/assets/img/bttn-up.png"
+      alt=""
+    />
+    <img class="bttn-moon" src="/assets/img/bttn-moon.png" alt="" />
+    <script src="/js/bttns.js"></script>
+  </body>
+</html>
