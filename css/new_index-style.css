@@ -18,7 +18,7 @@ a {
   position: relative;
   justify-content: center;
   align-items: center;
-  background: url("{{site.baseurl}}/assets/img/pexels-matheus-bertelli-1144687.jpg")
+  background: url("/{{site.baseurl}}/assets/img/pexels-matheus-bertelli-1144687.jpg")
     rgba(191, 191, 191, 0.3);
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ a {
   height: 250px;
   border: azure 5px solid;
   border-radius: 50%;
-  background-image: url("{{site.baseurl}}/assets/img/pexels-perchek-industrie-5451980.jpg");
+  background-image: url("/{{site.baseurl}}/assets/img/pexels-perchek-industrie-5451980.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
