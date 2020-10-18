@@ -1,0 +1,7 @@
+<p>Очень часто у пользователей при дуалбуте (установке Windows, а затем Linux) возникают сложности с тем, что время на системах разнится и оно всё время сбивается при переключении с одной системы на другую.</p>
+
+<p>Я нашёл достаточно быстрое решение для этой проблемы:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ln</span> <span class="nt">-sf</span> /usr/share/zoneinfo/&lt;Country&gt;/&lt;City&gt; /etc/localtime
+timedatectl set-ntp <span class="nb">true</span> <span class="c"># Данная команда будет синхронизировать время с сервером</span>
+timedatectl
+</code></pre></div></div>

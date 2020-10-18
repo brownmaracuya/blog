@@ -78,6 +78,13 @@ code {
   color: #f8f8f2;
 }
 
+blockquote {
+  border-left: #8f8f8f 5px solid;
+  padding-left: 1rem;
+  margin: 1rem 0.5rem;
+  font-style: italic;
+}
+
 code.language-plaintext {
   color: inherit;
 }
