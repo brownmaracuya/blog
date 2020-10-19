@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-10-19T04:34:17+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">&amp;gt;_ BrownMaracuya Blog</title><subtitle>Блог веб-разработчика, активного юзера Linux, и просто хорошего парня.</subtitle><entry><title type="html">Время в линукс и Windows при дуалбуте</title><link href="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html" rel="alternate" type="text/html" title="Время в линукс и Windows при дуалбуте" /><published>2020-10-18T15:50:05+03:00</published><updated>2020-10-18T15:50:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B2%20%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81%20%D0%B8%20Windows%20%D0%BF%D1%80%D0%B8%20%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html">&lt;p&gt;Очень часто у пользователей при дуалбуте (установке Windows, а затем Linux) возникают сложности с тем, что время на системах разнится и оно всё время сбивается при переключении с одной системы на другую.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-10-19T06:08:59+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">&amp;gt;_ BrownMaracuya Blog</title><subtitle>Блог веб-разработчика, активного юзера Linux, и просто хорошего парня.</subtitle><entry><title type="html">Время в линукс и Windows при дуалбуте</title><link href="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html" rel="alternate" type="text/html" title="Время в линукс и Windows при дуалбуте" /><published>2020-10-18T15:50:05+03:00</published><updated>2020-10-18T15:50:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B2%20%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81%20%D0%B8%20Windows%20%D0%BF%D1%80%D0%B8%20%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html">&lt;p&gt;Очень часто у пользователей при дуалбуте (установке Windows, а затем Linux) возникают сложности с тем, что время на системах разнится и оно всё время сбивается при переключении с одной системы на другую.&lt;/p&gt;
 
 &lt;p&gt;Я нашёл достаточно быстрое решение для этой проблемы:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sf&lt;/span&gt; /usr/share/zoneinfo/&amp;lt;Country&amp;gt;/&amp;lt;City&amp;gt; /etc/localtime
@@ -13,14 +13,18 @@ timedatectl
 
 &lt;p&gt;&lt;strong&gt;Плюсы и минусы&lt;/strong&gt;:&lt;/p&gt;
 &lt;h5 id=&quot;i3&quot;&gt;i3&lt;/h5&gt;
-&lt;p&gt;+ Гибконастраиваемый
-+ Легковесный
-+ Вся конфигурация в одном файле (&lt;em&gt;хотя, этот плюс, конечно же субъективный&lt;/em&gt;)
-+ Правила расположения окон можно настроить очень гибко
-+ Очень хорошая документация&lt;/p&gt;
+&lt;p&gt;+ Гибконастраиваемый&lt;/p&gt;
+
+&lt;p&gt;+ Легковесный&lt;/p&gt;
+
+&lt;p&gt;+ Вся конфигурация в одном файле (&lt;em&gt;хотя, этот плюс, конечно же субъективный&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;+ Правила расположения окон можно настроить очень гибко&lt;/p&gt;
+
+&lt;p&gt;+ Очень хорошая документация&lt;/p&gt;
 
 &lt;p&gt;- Оригинальный i3 не такой уж и гибкий, как его форк &lt;a href=&quot;https://github.com/Airblader/i3&quot;&gt;i3-gaps&lt;/a&gt;
-- Изначально поставляется просто как пустой экран с dmenu (пакет из suckless-tools)&lt;/p&gt;
+- Изначально поставляется просто как пусfooterтой экран с dmenu (пакет из suckless-tools)&lt;/p&gt;
 
 &lt;p&gt;Скриншоты:&lt;/p&gt;
 
@@ -32,28 +36,39 @@ timedatectl
 
 &lt;h5 id=&quot;bspwm&quot;&gt;bspwm&lt;/h5&gt;
 
-&lt;p&gt;+ Конфигурация может быть написана на любом скриптовом языке. По сути конфигурация - просто набор последовательных правил. Сам же bspwm может быть настроен с помощью bspc
-+ Bspc содержит мануал с краткими выкладками и примерами
-+ Отступы между окнами присутствуют по умолчанию в отличии от i3
-+ Настройка горячих клавиш производится с помощью отдельной программы sxhkd. Все горячие клавиши могут быть перенесены на другой WM&lt;/p&gt;
+&lt;p&gt;+ Конфигурация может быть написана на любом скриптовом языке. По сути конфигурация - просто набор последовательных правил. Сам же bspwm может быть настроен с помощью bspc&lt;/p&gt;
 
-&lt;p&gt;- Нет нормальной документации (только мануал)
-- Нужно докачивать программы по типу rofi, dmenu, alacritty (или любого другого терминала) и так далее, т.к. без них bspwm &lt;strong&gt;вообще ничего не показывает&lt;/strong&gt;
-- Может чуть больше нагружать систему, чем i3 из-за дополнительных утилит&lt;/p&gt;
+&lt;p&gt;+ Bspc содержит мануал с краткими выкладками и примерами&lt;/p&gt;
+
+&lt;p&gt;+ Отступы между окнами присутствуют по умолчанию в отличии от i3&lt;/p&gt;
+
+&lt;p&gt;+ Настройка горячих клавиш производится с помощью отдельной программы sxhkd. Все горячие клавиши могут быть перенесены на другой WM&lt;/p&gt;
+
+&lt;p&gt;- Нет нормальной документации (только мануал)&lt;/p&gt;
+
+&lt;p&gt;- Нужно докачивать программы по типу rofi, dmenu, alacritty (или любого другого терминала) и так далее, т.к. без них bspwm &lt;strong&gt;вообще ничего не показывает&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;- Может чуть больше нагружать систему, чем i3 из-за дополнительных утилит&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/Username77177/bspwm-ground-config&quot;&gt;Моя конфигурация bspwm&lt;/a&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;awesome&quot;&gt;awesome&lt;/h5&gt;
 
-&lt;p&gt;+ Хорошо задокументирован
-+ Вся конфигурация на языке Lua
-+ Очень гибкий
-+ Все утилиты нужные для работы идут в комплекте. Не нужно ничего докачивать
-+ Нормально обращается с мышью
-+ Отступы между окнами присутствуют (привет, i3)&lt;/p&gt;
+&lt;p&gt;+ Хорошо задокументирован&lt;/p&gt;
 
-&lt;p&gt;- Обязательное знание Lua
-- Немного больше нагружает систему, чем bspwm&lt;/p&gt;
+&lt;p&gt;+ Вся конфигурация на языке Lua&lt;/p&gt;
+
+&lt;p&gt;+ Очень гибкий&lt;/p&gt;
+
+&lt;p&gt;+ Все утилиты нужные для работы идут в комплекте. Не нужно ничего докачивать&lt;/p&gt;
+
+&lt;p&gt;+ Нормально обращается с мышью&lt;/p&gt;
+
+&lt;p&gt;+ Отступы между окнами присутствуют (привет, i3)&lt;/p&gt;
+
+&lt;p&gt;- Обязательное знание Lua&lt;/p&gt;
+
+&lt;p&gt;- Немного больше нагружает систему, чем bspwm&lt;/p&gt;
 
 &lt;h1 id=&quot;личное-мнение&quot;&gt;Личное мнение&lt;/h1&gt;
 &lt;p&gt;Мне лично по душе bspwm. Он лёгкий в конфигурации, над ним не нужно много работать, всё уже готово.&lt;/p&gt;
@@ -72,7 +87,7 @@ timedatectl
 &lt;p&gt;Собрал все репозитории с конфигурационными файлами
 &lt;a href=&quot;https://github.com/Username77177/dotfiles&quot;&gt;Репозиторий, где я собирал конфиг i3/bspwm&lt;/a&gt;
 &lt;a href=&quot;https://github.com/Username77177/Configurations&quot;&gt;Репозиторий, где я собирал конфиг под терминал,  tmux, и другое&lt;/a&gt;
-&lt;a href=&quot;https://github.com/Username77177/bspwm-ground-config&quot;&gt;Репозиторий, отведённый чисто для bspwm&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="i3" /><summary type="html">Немного расскажу о моем опыте использования тайловых менеджеров окон, а также рассмотрим кратко плюсы и минусы, которые я нашёл за 3 месяца использования.</summary></entry><entry><title type="html">Консольные утилиты Linux, которые смогут облегчить вам жизнь</title><link href="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%83%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B-Linux,-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%81%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D0%BE%D0%B1%D0%BB%D0%B5%D0%B3%D1%87%D0%B8%D1%82%D1%8C-%D0%B2%D0%B0%D0%BC-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C.html" rel="alternate" type="text/html" title="Консольные утилиты Linux, которые смогут облегчить вам жизнь" /><published>2020-10-18T00:35:05+03:00</published><updated>2020-10-18T00:35:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%83%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B%20Linux,%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D1%81%D0%BC%D0%BE%D0%B3%D1%83%D1%82%20%D0%BE%D0%B1%D0%BB%D0%B5%D0%B3%D1%87%D0%B8%D1%82%D1%8C%20%D0%B2%D0%B0%D0%BC%20%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%83%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B-Linux,-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%81%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D0%BE%D0%B1%D0%BB%D0%B5%D0%B3%D1%87%D0%B8%D1%82%D1%8C-%D0%B2%D0%B0%D0%BC-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C.html">&lt;p&gt;Немного о утилитах на консоли, которые знают немногие, однако они могут быть полезны как для начинающего джуна, так и для крепкого сеньора.&lt;/p&gt;
+&lt;a href=&quot;https://github.com/Username77177/bspwm-ground-config&quot;&gt;Репозиторий, отведённый чисто для bspwm&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="i3" /><category term="bspwm" /><category term="awesome" /><summary type="html">Немного расскажу о моем опыте использования тайловых менеджеров окон, а также рассмотрим кратко плюсы и минусы, которые я нашёл за 3 месяца использования.</summary></entry><entry><title type="html">Консольные утилиты Linux, которые смогут облегчить вам жизнь</title><link href="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%83%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B-Linux,-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%81%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D0%BE%D0%B1%D0%BB%D0%B5%D0%B3%D1%87%D0%B8%D1%82%D1%8C-%D0%B2%D0%B0%D0%BC-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C.html" rel="alternate" type="text/html" title="Консольные утилиты Linux, которые смогут облегчить вам жизнь" /><published>2020-10-18T00:35:05+03:00</published><updated>2020-10-18T00:35:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%83%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B%20Linux,%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D1%81%D0%BC%D0%BE%D0%B3%D1%83%D1%82%20%D0%BE%D0%B1%D0%BB%D0%B5%D0%B3%D1%87%D0%B8%D1%82%D1%8C%20%D0%B2%D0%B0%D0%BC%20%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%83%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B-Linux,-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%81%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D0%BE%D0%B1%D0%BB%D0%B5%D0%B3%D1%87%D0%B8%D1%82%D1%8C-%D0%B2%D0%B0%D0%BC-%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C.html">&lt;p&gt;Немного о утилитах на консоли, которые знают немногие, однако они могут быть полезны как для начинающего джуна, так и для крепкого сеньора.&lt;/p&gt;
 
 &lt;h1 id=&quot;почему-стоит-написать-об-этом&quot;&gt;Почему стоит написать об этом&lt;/h1&gt;
 &lt;p&gt;Написать о утилитах (прежде всего консольных) стоит из-за того, что я вижу, как многие люди не используют мощность консоли на все 100%. Многие ограничиваются простым созданием файлов, а также переходом между директориями, работая в консоли. Я считаю что это следствие того, что в рунете мало источников, где бы могли нормально рассказать о утилитах, как на них работать, и что они делают.
@@ -228,7 +243,7 @@ timedatectl
 
 &lt;h1 id=&quot;а-что-за-список&quot;&gt;А что за список?&lt;/h1&gt;
 &lt;p&gt;Это список утилит, которые я использую сам лично. Дополнительный список вы можете найти здесь &lt;a href=&quot;https://github.com/agarrharr/awesome-cli-apps#terminal-sharing-utilities&quot;&gt;ссылка на репозиторий GitHub&lt;/a&gt;
-Я настоятельно попрошу вас дополнить список своими утилитами в комментариях. Если этот пост принёс в ваш терминал хоть чуточку чего-нибудь нового - был рад посодействовать.&lt;/p&gt;</content><author><name></name></author><category term="linux" /><summary type="html">Немного о утилитах на консоли, которые знают немногие, однако они могут быть полезны как для начинающего джуна, так и для крепкого сеньора.</summary></entry><entry><title type="html">Конфигурация i3 под ноутбук: как поднять производительность до 100%?</title><link href="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-i3-%D0%BF%D0%BE%D0%B4-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA-%D0%BA%D0%B0%D0%BA-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%BE-100.html" rel="alternate" type="text/html" title="Конфигурация i3 под ноутбук: как поднять производительность до 100%?" /><published>2020-10-18T00:35:05+03:00</published><updated>2020-10-18T00:35:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20i3%20%D0%BF%D0%BE%D0%B4%20%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA:%20%D0%BA%D0%B0%D0%BA%20%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%B4%D0%BE%20100%25</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-i3-%D0%BF%D0%BE%D0%B4-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA-%D0%BA%D0%B0%D0%BA-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%BE-100.html">&lt;p&gt;Недавно я понял, что мой ноутбук недостаточно производителен. Ему не хватает мощности вывезти всё вместе: Vim (+ 20 плагинов), VSCode (+ столько же расширений), Google Chrome (+ 20 вкладок) и так далее. Казалось бы, обычная проблема на ноутбуках с 4 ГБ ОЗУ, однако я не стал сдаваться. Я люблю ноутбуки за их компактность, а также за то, что они могут работать на батарее где угодно. Мне нужно было просто подумать, как освободить лишнюю ОЗУ, а также увеличить энергоэффективность.&lt;/p&gt;
+Я настоятельно попрошу вас дополнить список своими утилитами в комментариях. Если этот пост принёс в ваш терминал хоть чуточку чего-нибудь нового - был рад посодействовать.&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="cli" /><category term="fm" /><category term="editors" /><category term="utilities" /><summary type="html">Немного о утилитах на консоли, которые знают немногие, однако они могут быть полезны как для начинающего джуна, так и для крепкого сеньора.</summary></entry><entry><title type="html">Конфигурация i3 под ноутбук: как поднять производительность до 100%?</title><link href="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-i3-%D0%BF%D0%BE%D0%B4-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA-%D0%BA%D0%B0%D0%BA-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%BE-100.html" rel="alternate" type="text/html" title="Конфигурация i3 под ноутбук: как поднять производительность до 100%?" /><published>2020-10-18T00:35:05+03:00</published><updated>2020-10-18T00:35:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20i3%20%D0%BF%D0%BE%D0%B4%20%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA:%20%D0%BA%D0%B0%D0%BA%20%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%B4%D0%BE%20100%25</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F-i3-%D0%BF%D0%BE%D0%B4-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA-%D0%BA%D0%B0%D0%BA-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%BE-100.html">&lt;p&gt;Недавно я понял, что мой ноутбук недостаточно производителен. Ему не хватает мощности вывезти всё вместе: Vim (+ 20 плагинов), VSCode (+ столько же расширений), Google Chrome (+ 20 вкладок) и так далее. Казалось бы, обычная проблема на ноутбуках с 4 ГБ ОЗУ, однако я не стал сдаваться. Я люблю ноутбуки за их компактность, а также за то, что они могут работать на батарее где угодно. Мне нужно было просто подумать, как освободить лишнюю ОЗУ, а также увеличить энергоэффективность.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://habrastorage.org/webt/za/im/iz/zaimiz9qe70tbtpjbyqul5-rgs8.jpeg&quot; /&gt;&lt;/p&gt;
 
@@ -452,7 +467,7 @@ client.background           &lt;span class=&quot;c&quot;&gt;#2f343f&lt;/span&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://habrastorage.org/webt/2n/kd/ws/2nkdws06uqfunrzsnqdyquxorvo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://habrastorage.org/webt/bq/n5/mq/bqn5mq_qac0cpioonu0aq1k-uua.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="i3" /><category term="Greati3" /><summary type="html">Недавно я понял, что мой ноутбук недостаточно производителен. Ему не хватает мощности вывезти всё вместе: Vim (+ 20 плагинов), VSCode (+ столько же расширений), Google Chrome (+ 20 вкладок) и так далее. Казалось бы, обычная проблема на ноутбуках с 4 ГБ ОЗУ, однако я не стал сдаваться. Я люблю ноутбуки за их компактность, а также за то, что они могут работать на батарее где угодно. Мне нужно было просто подумать, как освободить лишнюю ОЗУ, а также увеличить энергоэффективность.</summary></entry><entry><title type="html">Всё про SSH</title><link href="http://localhost:4000/blog/2020/10/16/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Всё про SSH" /><published>2020-10-16T21:44:05+03:00</published><updated>2020-10-16T21:44:05+03:00</updated><id>http://localhost:4000/blog/2020/10/16/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/16/welcome-to-jekyll.html">&lt;p&gt;&lt;strong&gt;SSH&lt;/strong&gt;- &lt;strong&gt;S&lt;/strong&gt;ecure &lt;strong&gt;Sh&lt;/strong&gt;ell. Он нужен для безопасного подключения между хостом (&lt;em&gt;компьютер, на котором будут производиться все действия. Его ещё называют сервер&lt;/em&gt;) и клиентом (&lt;em&gt;компьютер, с которого будут производиться все действия. Его часто называют клиентом&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://habrastorage.org/webt/bq/n5/mq/bqn5mq_qac0cpioonu0aq1k-uua.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="i3" /><category term="Greati3" /><category term="config" /><summary type="html">Недавно я понял, что мой ноутбук недостаточно производителен. Ему не хватает мощности вывезти всё вместе: Vim (+ 20 плагинов), VSCode (+ столько же расширений), Google Chrome (+ 20 вкладок) и так далее. Казалось бы, обычная проблема на ноутбуках с 4 ГБ ОЗУ, однако я не стал сдаваться. Я люблю ноутбуки за их компактность, а также за то, что они могут работать на батарее где угодно. Мне нужно было просто подумать, как освободить лишнюю ОЗУ, а также увеличить энергоэффективность.</summary></entry><entry><title type="html">Всё про SSH</title><link href="http://localhost:4000/blog/2020/10/16/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Всё про SSH" /><published>2020-10-16T21:44:05+03:00</published><updated>2020-10-16T21:44:05+03:00</updated><id>http://localhost:4000/blog/2020/10/16/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/16/welcome-to-jekyll.html">&lt;p&gt;&lt;strong&gt;SSH&lt;/strong&gt;- &lt;strong&gt;S&lt;/strong&gt;ecure &lt;strong&gt;Sh&lt;/strong&gt;ell. Он нужен для безопасного подключения между хостом (&lt;em&gt;компьютер, на котором будут производиться все действия. Его ещё называют сервер&lt;/em&gt;) и клиентом (&lt;em&gt;компьютер, с которого будут производиться все действия. Его часто называют клиентом&lt;/em&gt;).&lt;/p&gt;
 
 &lt;p&gt;Дабы установить SSH (&lt;em&gt;для нас это клиент OpenSSH&lt;/em&gt;), нужно выполнить следующую команду:&lt;/p&gt;
 
@@ -628,7 +643,7 @@ sshd_config&lt;/code&gt;.&lt;/p&gt;
 После того, как вы скинули файл с разрешением &lt;em&gt;.pub&lt;/em&gt; , вы можете спокойно использовать
 сервер.&lt;/p&gt;
 
-&lt;!-- Variables --&gt;</content><author><name></name></author><category term="linux" /><category term="ssh" /><summary type="html">SSH- Secure Shell. Он нужен для безопасного подключения между хостом (компьютер, на котором будут производиться все действия. Его ещё называют сервер) и клиентом (компьютер, с которого будут производиться все действия. Его часто называют клиентом).</summary></entry><entry><title type="html">Установка арча и его настройка</title><link href="http://localhost:4000/blog/2020/10/16/BuildYourArch.html" rel="alternate" type="text/html" title="Установка арча и его настройка" /><published>2020-10-16T21:44:05+03:00</published><updated>2020-10-16T21:44:05+03:00</updated><id>http://localhost:4000/blog/2020/10/16/BuildYourArch</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/16/BuildYourArch.html">&lt;p&gt;Так как я довольно давно уже сижу на Arch Linux, я решил поделиться моими конфигами и настроками.&lt;/p&gt;
+&lt;!-- Variables --&gt;</content><author><name></name></author><category term="linux" /><category term="ssh" /><category term="sshd" /><summary type="html">SSH- Secure Shell. Он нужен для безопасного подключения между хостом (компьютер, на котором будут производиться все действия. Его ещё называют сервер) и клиентом (компьютер, с которого будут производиться все действия. Его часто называют клиентом).</summary></entry><entry><title type="html">Установка арча и его настройка</title><link href="http://localhost:4000/blog/2020/10/16/BuildYourArch.html" rel="alternate" type="text/html" title="Установка арча и его настройка" /><published>2020-10-16T21:44:05+03:00</published><updated>2020-10-16T21:44:05+03:00</updated><id>http://localhost:4000/blog/2020/10/16/BuildYourArch</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/16/BuildYourArch.html">&lt;p&gt;Так как я довольно давно уже сижу на Arch Linux, я решил поделиться моими конфигами и настроками.&lt;/p&gt;
 
 &lt;h1 id=&quot;как-я-устанавливаю-arch&quot;&gt;Как я устанавливаю Arch&lt;/h1&gt;
 
@@ -2689,4 +2704,4 @@ bindcode &lt;span class=&quot;nv&quot;&gt;$mod&lt;/span&gt;+Ctrl+mod1+19 gaps in
 #set -g status-right '#[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]#[fg=colour121,bg=colour235] %r  %a  %Y #[fg=colour238,bg=colour235,nobold,nounderscore,noitalics]#[fg=colour222,bg=colour238] #H #[fg=colour154,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour232,bg=colour154] #(rainbarf --battery --remaining --no-rgb) '
 #setw -g window-status-format '#[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]#[default] #I  #W #[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]'
 #setw -g window-status-current-format '#[fg=colour235,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour222,bg=colour238] #I  #W  #F #[fg=colour238,bg=colour235,nobold,nounderscore,noitalics]'
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="linux" /><category term="ssh" /><summary type="html">Так как я довольно давно уже сижу на Arch Linux, я решил поделиться моими конфигами и настроками.</summary></entry></feed>
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="archlinux" /><category term="install" /><category term="config" /><summary type="html">Так как я довольно давно уже сижу на Arch Linux, я решил поделиться моими конфигами и настроками.</summary></entry></feed>
