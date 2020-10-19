@@ -51,10 +51,9 @@ a {
   text-align: center;
   font-family: inherit;
   margin: 0 0 0.199rem 0;
-}
-.info_text span {
   background: #2c5646;
-  padding: 0.2rem 1rem;
+  justify-self: center;
+  padding: 0.1em 1em;
 }
 
 .info_name {
@@ -78,9 +77,10 @@ a {
 .nav_list {
   list-style-type: none;
   padding: 0;
+  justify-content: center;
 }
 .nav_list .nav_list-item {
-  margin: 0 1rem;
+  margin: 0 2em;
 }
 .nav_list .nav_list-item:hover {
   /* animation-name: nav_list_hover;
@@ -116,11 +116,13 @@ a {
 .social_list {
   list-style-type: none;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .social_list .social_list-item {
   border-radius: 50%;
   background-color: white;
-  margin: 0 1rem;
+  margin: 0.5em 1rem;
   width: fit-content;
 }
 .social_list .social_list-item:hover {
