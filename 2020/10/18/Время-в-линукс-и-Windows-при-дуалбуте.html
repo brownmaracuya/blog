@@ -37,21 +37,44 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
-   ym(68432512, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/68432512" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+      ym(68432512, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/68432512"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <header>
@@ -62,17 +85,28 @@
     </header>
 
     <h1 class="content_header">Время в линукс и Windows при дуалбуте</h1>
-    <div class="container"><p>Очень часто у пользователей при дуалбуте (установке Windows, а затем Linux) возникают сложности с тем, что время на системах разнится и оно всё время сбивается при переключении с одной системы на другую.</p>
+    <main class="container"><p>Очень часто у пользователей при дуалбуте (установке Windows, а затем Linux) возникают сложности с тем, что время на системах разнится и оно всё время сбивается при переключении с одной системы на другую.</p>
 
 <p>Я нашёл достаточно быстрое решение для этой проблемы:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ln</span> <span class="nt">-sf</span> /usr/share/zoneinfo/&lt;Country&gt;/&lt;City&gt; /etc/localtime
 timedatectl set-ntp <span class="nb">true</span> <span class="c"># Данная команда будет синхронизировать время с сервером</span>
 timedatectl
 </code></pre></div></div>
-</div>
+</main>
     <footer class="content_footer">
-      <a href="https://metrika.yandex.ua/stat/?id=68432833&amp;from=informer"
-         target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/68432833/1_1_3F3F40FF_1F1F20FF_1_pageviews" style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="68432833" data-lang="ru" /></a>
+      <a
+        href="https://metrika.yandex.ua/stat/?id=68432833&amp;from=informer"
+        target="_blank"
+        rel="nofollow"
+        ><img
+          src="https://informer.yandex.ru/informer/68432833/1_1_3F3F40FF_1F1F20FF_1_pageviews"
+          style="width: 80px; height: 15px; border: 0"
+          alt="Яндекс.Метрика"
+          title="Яндекс.Метрика: данные за сегодня (просмотры)"
+          class="ym-advanced-informer"
+          data-cid="68432833"
+          data-lang="ru"
+      /></a>
       <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
     </footer>
 
