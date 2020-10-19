@@ -39,21 +39,44 @@
     <!-- ]]] -->
     <link rel="stylesheet" href="/blog/css/normalize.css" />
     <link rel="stylesheet" href="/blog/css/new_index-style.css" />
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
-   ym(68432512, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/68432512" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+      ym(68432512, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/68432512"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <!-- Centered Block (Fullscreen) -->
@@ -94,48 +117,63 @@
           </nav>
           <section class="info_social">
             <ul class="social_list flex-row justify-between">
-              <li class="social_list-item">
+              <li class="social_list-item" title="vk">
                 <a href="https://www.vk.com/brownmaracuya" class="info_link"
                   ><img
-                    src="/blog/assets/img/icons/vk-logo-24.png"
+                    src="/blog/assets/img/icons/vk.svg"
                     alt="vk icon"
                     class="social_icon"
                 /></a>
               </li>
-              <li class="social_list-item">
+              <li class="social_list-item" title="github">
                 <a href="https://www.github.com/brownmaracuya" class="info_link"
                   ><img
-                    src="/blog/assets/img/icons/github-logo-24.png"
-                    alt="https://www.github icon"
+                    src="/blog/assets/img/icons/github.svg"
+                    alt="github icon"
                     class="social_icon"
                 /></a>
               </li>
-              <li class="social_list-item">
+              <li class="social_list-item" title="bitbucket">
+                <a href="https://bitbucket.org/brownmaracuya" class="info_link"
+                  ><img
+                    src="/blog/assets/img/icons/bitbucket.svg"
+                    alt="bitbucket icon"
+                    class="social_icon"
+                /></a>
+              </li>
+
+              <li class="social_list-item" title="twitter">
                 <a
                   href="https://www.twitter.com/brownmaracuya"
                   class="info_link"
                   ><img
-                    src="/blog/assets/img/icons/twitter-logo-24.png"
+                    src="/blog/assets/img/icons/twitter.svg"
                     alt="twitter icon"
                     class="social_icon"
                 /></a>
               </li>
-              <li class="social_list-item">
+              <li class="social_list-item" title="rss">
+                <a href="/blog/rss.xml" class="info_link"
+                  ><img
+                    src="http://localhost:4000/blog/assets/img/icons/rss.svg"
+                    alt="rss icon"
+                    class="social_icon"
+                /></a>
+              </li>
+              <li class="social_list-item" title="instagram">
                 <a
                   href="https://www.instagram.com/brownmaracuya"
                   class="info_link"
                   ><img
-                    src="/blog/assets/img/icons/instagram-logo-24.png"
+                    src="/blog/assets/img/icons/instagram.svg"
                     alt="instagram icon"
                     class="social_icon"
                 /></a>
               </li>
-              <li class="social_list-item">
-                <a
-                  href="https://codepen.io/brownmaracuya"
-                  class="info_link"
+              <li class="social_list-item" title="codepen">
+                <a href="https://codepen.io/brownmaracuya" class="info_link"
                   ><img
-                    src="/blog/assets/img/icons/codepen-logo-24.png"
+                    src="/blog/assets/img/icons/codepen.svg"
                     alt="codepen icon"
                     class="social_icon"
                 /></a>
@@ -144,6 +182,6 @@
           </section>
         </div>
       </div>
-</div>
+    </div>
   </body>
 </html>
