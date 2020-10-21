@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>О интернет протоколе</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+      />
+
+    <link rel="stylesheet" href="/blog/css/normalize.css" />
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/syntax.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/blog/assets/img/apple-touch-icon.png"
+      />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/blog/assets/img/favicon-32x32.png"
+      />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/blog/assets/img/favicon-16x16.png"
+      />
+    <link rel="manifest" href="/blog/assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/blog/assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+      />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+              m[i] =
+                m[i] ||
+                function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                      };
+              m[i].l = 1 * new Date();
+              (k = e.createElement(t)),
+                (a = e.getElementsByTagName(t)[0]),
+                (k.async = 1),
+                (k.src = r),
+                a.parentNode.insertBefore(k, a);
+            })(
+                    window,
+                    document,
+                    "script",
+                    "https://mc.yandex.ru/metrika/tag.js",
+                    "ym"
+                  );
+
+            ym(68432512, "init", {
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                  });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/68432512"
+          style="position: absolute; left: -9999px"
+          alt=""
+          /></div
+        ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <header>
+      <!-- <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        </nav> -->
+    </header>
+
+
+    <!--* Main content of the post -->
+    <main class="container">
+      <!--* Main Title -->
+      <h1 class="content_header">О интернет протоколе</h1>
+
+      <!--* Taglist -->
+      <ul class="content_tag-list">
+        
+        <li class="tag-list_item">web</li>
+        
+      </ul>
+
+      <blockquote>
+  <p><strong>Сетево́й протоко́л</strong> — набор правил и действий (очерёдности действий), позволяющий осуществлять соединение и обмен данными между двумя и более включёнными в сеть устройствами. (<a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B8_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85">Википедия</a>)</p>
+</blockquote>
+
+<p><strong>IP (Internet Protocol)</strong> - набор правил для отправки информации через сеть, а также получения этой информации. Вся информация в интернете разделена на кусочки, которые называются пакеты.
+Атрибуты интернет протокола привязаны к каждому пакету, чтобы роутер (или другое устройство для отправления пакетов) знало куда именно отправлять данный пакет. Адрес от кого и куда пакет отправляется называется <strong>IP-адресом</strong>.</p>
+
+<p><strong>IP-адрес</strong> состоит из 4 цифр, каждая из них может принимать 256 значений (от 0 до 255), например: <code class="language-plaintext highlighter-rouge">192.168.0.1, 127.88.93.2, 255.255.255.255, 0.0.0.0</code>. Данный адрес является <em>IPv4</em> адресом. Компьютер видит его примерно так: <code class="language-plaintext highlighter-rouge">11000000.10101000.00000000.00000001</code></p>
+
+<p>Также, для отправки пакета нужна маска подсети. Маска подсети отделяет <em>адрес сети</em> и <em>адрес хоста</em> (<em>хост - устройство, которое подключено к сети</em>), для того чтобы отделить одного от другого как раз таки и нужна маска подсети.</p>
+
+<p>Для того чтобы отделить одного от другого нужно знать, что такое побитовое умножение. В побитовом умножении всё достаточно легко:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   11000000.10101000.00000000.00000001    (192.168.0.1)
+ + 11111111.11111111.11111111.00000000    (255.255.255.0)
+ -----------------------------------
+   11000000.10101000.00000000.00000000    (192.168.0.0)
+</code></pre></div></div>
+
+<p>При побитовом сложении получается 1, только если два слагаемых равны 1. Обычно маска подсети это <code class="language-plaintext highlighter-rouge">255.255.255.0</code>. Поэтому первые 3 октеты (<em>октета - 8 чисел</em>) будут точно такие же, как и IP-адрес, а последних цифр не будет. Как уже можно понять первые 3 октеты - адрес сети, последняя октета - адрес хоста.</p>
+
+<!--
+  ## Классы IP
+  <table cellpadding="2" cellspacing="0" width="650">
+  <thead>
+  <tr>
+  <th align="center" valign="top">&nbsp;</th>
+  <th align="center" valign="top"><strong>Адреса сетей</strong></th>
+  <th align="center" valign="top"><strong>Маска подсети</strong></th>
+  <th align="center" valign="top"><strong>Количество сетей</strong></th>
+  <th align="center" valign="top"><strong>Количество хостов</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td align="center" valign="top"><strong>Класс A</strong></td>
+  <td align="center" valign="top">1-126.0.0.0</td>
+  <td align="center" valign="top">255.0.0.0</td>
+  <td align="center" valign="top">126</td>
+  <td align="center" valign="top">16,777,214</td>
+  </tr>
+  <tr>
+  <td align="center" valign="top"><strong>Класс B</strong></td>
+  <td align="center" valign="top">128-191.0.0.0</td>
+  <td align="center" valign="top">255.255.0.0</td>
+  <td align="center" valign="top">16,384</td>
+  <td align="center" valign="top">65,534</td>
+  </tr>
+  <tr>
+  <td align="center" valign="top"><strong>Класс C</strong></td>
+  <td align="center" valign="top">192-223.0.0.0</td>
+  <td align="center" valign="top">255.255.255.0</td>
+  <td align="center" valign="top">2,097,152</td>
+  <td align="center" valign="top">254</td>
+  </tr>
+  </tbody>
+  </table>
+-->
+
+<h2 id="что-присутствует-в-ip-пакете">Что присутствует в IP пакете?</h2>
+<p>В IP пакете присутствуют следующие атрибуты:</p>
+<ul>
+  <li>Адрес отправителя</li>
+  <li>Адрес получателя</li>
+  <li>Размер пакета</li>
+  <li>Какой метод транспортировки используется (<em>TCP, UDP</em>)</li>
+  <li>TTL (<strong>Time To Live</strong>) - количество попыток, перед которым пакет “потеряется”</li>
+</ul>
+
+<blockquote>
+  <p><strong>Протокол передачи данных</strong> — набор соглашений интерфейса логического уровня, которые определяют обмен данными между различными программами. Эти соглашения задают единообразный способ передачи сообщений и обработки ошибок. Сигнальный протокол используется для управления соединением — например, установки, переадресации, разрыва связи. Примеры протоколов: RTSP, SIP. Для передачи данных используются такие протоколы как RTP. (<a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B8_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85">Википедия</a>)</p>
+</blockquote>
+
+<h2 id="методы-транспортировки-пакетов-tcp">Методы транспортировки пакетов (TCP)</h2>
+<p><strong>Transmission Control Protocol</strong> - один из протоколов передачи данных, который является достаточно медленным, однако надёжным. При отправке пакета по протоколу TCP, хост отправляет пакет к другому хосту и <strong>ждёт ответа (пришёл ли пакет)</strong>. Если пакет <em>не пришёл</em>, то хост отправляет пакет снова. Также стоит отметить что данный протокол устанавливает соединение <strong>до</strong> того, как собирается отправлять пакеты.</p>
+
+<h2 id="методы-транспортировки-пакетов-udp">Методы транспортировки пакетов (UDP)</h2>
+<p><strong>User Datagram Protocol</strong> - протокол, который отличается от <strong>TCP</strong> скоростью, но точно не надёжностью. Он не устанавливает соединение до отправки пакетов и не проверяет получил ли пакет адресат (<em>тот, кто получил пакет</em>).</p>
+</main>
+    <footer class="content_footer">
+      <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
+    </footer>
+
+    <!--* Buttons -->
+    <a href="/blog/index.html">
+      <img
+        class="bttn-home"
+        src="/blog/assets/img/bttn-home.png"
+        alt=""
+        />
+    </a>
+    <img
+      class="bttn-up"
+      onclick="scroll(0, 0);"
+      src="/blog/assets/img/bttn-up.png"
+      alt=""
+      />
+    <img
+      class="bttn-moon"
+      src="/blog/assets/img/bttn-moon.png"
+      alt=""
+      />
+    <!--? Scripts  -->
+    <script src="/blog/js/bttns.js"></script>
+  </body>
+</html>

@@ -8,8 +8,7 @@
 .dark {
   /* color: var(--wh);
   background-color: var(--bl); */
-  --bl: #fefffe;
-  --wh: #1f1f20;
+  --bl: #fefffe; --wh: #1f1f20;
   --whiteOnRed: #ea3d3d;
   --footer: #c9c9c9;
 }
@@ -65,7 +64,7 @@ ol {
 }
 li {
   margin: 0 0 1rem 0;
-  color: #5c7fc0;
+  color: #25324c;
 }
 
 .container {
@@ -202,6 +201,18 @@ ul.section-nav::before {
   text-align: center;
   display: block;
   margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  font-family: 'Roboto Mono', monospace;
 }
 
 /** Adaptive */

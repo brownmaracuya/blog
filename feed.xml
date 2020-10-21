@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-10-20T00:59:02+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">&amp;gt;_ BrownMaracuya Blog</title><subtitle>Блог веб-разработчика, активного юзера Linux, и просто хорошего парня.</subtitle><entry><title type="html">Время в линукс и Windows при дуалбуте</title><link href="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html" rel="alternate" type="text/html" title="Время в линукс и Windows при дуалбуте" /><published>2020-10-18T15:50:05+03:00</published><updated>2020-10-18T15:50:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B2%20%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81%20%D0%B8%20Windows%20%D0%BF%D1%80%D0%B8%20%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html">&lt;p&gt;Очень часто у пользователей при дуалбуте (установке Windows, а затем Linux) возникают сложности с тем, что время на системах разнится и оно всё время сбивается при переключении с одной системы на другую.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-10-21T16:30:56+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">&amp;gt;_ BrownMaracuya Blog</title><subtitle>Блог веб-разработчика, активного юзера Linux, и просто хорошего парня.</subtitle><entry><title type="html">О интернет протоколе</title><link href="http://localhost:4000/blog/2020/10/21/%D0%9E-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5.html" rel="alternate" type="text/html" title="О интернет протоколе" /><published>2020-10-21T14:26:00+03:00</published><updated>2020-10-21T14:26:00+03:00</updated><id>http://localhost:4000/blog/2020/10/21/%D0%9E%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/21/%D0%9E-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5.html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Сетево́й протоко́л&lt;/strong&gt; — набор правил и действий (очерёдности действий), позволяющий осуществлять соединение и обмен данными между двумя и более включёнными в сеть устройствами. (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B8_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85&quot;&gt;Википедия&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;IP (Internet Protocol)&lt;/strong&gt; - набор правил для отправки информации через сеть, а также получения этой информации. Вся информация в интернете разделена на кусочки, которые называются пакеты.
+Атрибуты интернет протокола привязаны к каждому пакету, чтобы роутер (или другое устройство для отправления пакетов) знало куда именно отправлять данный пакет. Адрес от кого и куда пакет отправляется называется &lt;strong&gt;IP-адресом&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IP-адрес&lt;/strong&gt; состоит из 4 цифр, каждая из них может принимать 256 значений (от 0 до 255), например: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;192.168.0.1, 127.88.93.2, 255.255.255.255, 0.0.0.0&lt;/code&gt;. Данный адрес является &lt;em&gt;IPv4&lt;/em&gt; адресом. Компьютер видит его примерно так: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;11000000.10101000.00000000.00000001&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Также, для отправки пакета нужна маска подсети. Маска подсети отделяет &lt;em&gt;адрес сети&lt;/em&gt; и &lt;em&gt;адрес хоста&lt;/em&gt; (&lt;em&gt;хост - устройство, которое подключено к сети&lt;/em&gt;), для того чтобы отделить одного от другого как раз таки и нужна маска подсети.&lt;/p&gt;
+
+&lt;p&gt;Для того чтобы отделить одного от другого нужно знать, что такое побитовое умножение. В побитовом умножении всё достаточно легко:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   11000000.10101000.00000000.00000001    (192.168.0.1)
+ + 11111111.11111111.11111111.00000000    (255.255.255.0)
+ -----------------------------------
+   11000000.10101000.00000000.00000000    (192.168.0.0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;При побитовом сложении получается 1, только если два слагаемых равны 1. Обычно маска подсети это &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;. Поэтому первые 3 октеты (&lt;em&gt;октета - 8 чисел&lt;/em&gt;) будут точно такие же, как и IP-адрес, а последних цифр не будет. Как уже можно понять первые 3 октеты - адрес сети, последняя октета - адрес хоста.&lt;/p&gt;
+
+&lt;!--
+  ## Классы IP
+  &lt;table cellpadding=&quot;2&quot; cellspacing=&quot;0&quot; width=&quot;650&quot;&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+  &lt;th align=&quot;center&quot; valign=&quot;top&quot;&gt;&amp;nbsp;&lt;/th&gt;
+  &lt;th align=&quot;center&quot; valign=&quot;top&quot;&gt;&lt;strong&gt;Адреса сетей&lt;/strong&gt;&lt;/th&gt;
+  &lt;th align=&quot;center&quot; valign=&quot;top&quot;&gt;&lt;strong&gt;Маска подсети&lt;/strong&gt;&lt;/th&gt;
+  &lt;th align=&quot;center&quot; valign=&quot;top&quot;&gt;&lt;strong&gt;Количество сетей&lt;/strong&gt;&lt;/th&gt;
+  &lt;th align=&quot;center&quot; valign=&quot;top&quot;&gt;&lt;strong&gt;Количество хостов&lt;/strong&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;&lt;strong&gt;Класс A&lt;/strong&gt;&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;1-126.0.0.0&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;255.0.0.0&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;126&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;16,777,214&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;&lt;strong&gt;Класс B&lt;/strong&gt;&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;128-191.0.0.0&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;255.255.0.0&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;16,384&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;65,534&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;&lt;strong&gt;Класс C&lt;/strong&gt;&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;192-223.0.0.0&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;255.255.255.0&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;2,097,152&lt;/td&gt;
+  &lt;td align=&quot;center&quot; valign=&quot;top&quot;&gt;254&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+--&gt;
+
+&lt;h2 id=&quot;что-присутствует-в-ip-пакете&quot;&gt;Что присутствует в IP пакете?&lt;/h2&gt;
+&lt;p&gt;В IP пакете присутствуют следующие атрибуты:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Адрес отправителя&lt;/li&gt;
+  &lt;li&gt;Адрес получателя&lt;/li&gt;
+  &lt;li&gt;Размер пакета&lt;/li&gt;
+  &lt;li&gt;Какой метод транспортировки используется (&lt;em&gt;TCP, UDP&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;TTL (&lt;strong&gt;Time To Live&lt;/strong&gt;) - количество попыток, перед которым пакет “потеряется”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Протокол передачи данных&lt;/strong&gt; — набор соглашений интерфейса логического уровня, которые определяют обмен данными между различными программами. Эти соглашения задают единообразный способ передачи сообщений и обработки ошибок. Сигнальный протокол используется для управления соединением — например, установки, переадресации, разрыва связи. Примеры протоколов: RTSP, SIP. Для передачи данных используются такие протоколы как RTP. (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B8_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85&quot;&gt;Википедия&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;методы-транспортировки-пакетов-tcp&quot;&gt;Методы транспортировки пакетов (TCP)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Transmission Control Protocol&lt;/strong&gt; - один из протоколов передачи данных, который является достаточно медленным, однако надёжным. При отправке пакета по протоколу TCP, хост отправляет пакет к другому хосту и &lt;strong&gt;ждёт ответа (пришёл ли пакет)&lt;/strong&gt;. Если пакет &lt;em&gt;не пришёл&lt;/em&gt;, то хост отправляет пакет снова. Также стоит отметить что данный протокол устанавливает соединение &lt;strong&gt;до&lt;/strong&gt; того, как собирается отправлять пакеты.&lt;/p&gt;
+
+&lt;h2 id=&quot;методы-транспортировки-пакетов-udp&quot;&gt;Методы транспортировки пакетов (UDP)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;User Datagram Protocol&lt;/strong&gt; - протокол, который отличается от &lt;strong&gt;TCP&lt;/strong&gt; скоростью, но точно не надёжностью. Он не устанавливает соединение до отправки пакетов и не проверяет получил ли пакет адресат (&lt;em&gt;тот, кто получил пакет&lt;/em&gt;).&lt;/p&gt;</content><author><name></name></author><category term="web" /><summary type="html">Сетево́й протоко́л — набор правил и действий (очерёдности действий), позволяющий осуществлять соединение и обмен данными между двумя и более включёнными в сеть устройствами. (Википедия)</summary></entry><entry><title type="html">Время в линукс и Windows при дуалбуте</title><link href="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html" rel="alternate" type="text/html" title="Время в линукс и Windows при дуалбуте" /><published>2020-10-18T15:50:05+03:00</published><updated>2020-10-18T15:50:05+03:00</updated><id>http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B2%20%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81%20%D0%B8%20Windows%20%D0%BF%D1%80%D0%B8%20%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/18/%D0%92%D1%80%D0%B5%D0%BC%D1%8F-%D0%B2-%D0%BB%D0%B8%D0%BD%D1%83%D0%BA%D1%81-%D0%B8-Windows-%D0%BF%D1%80%D0%B8-%D0%B4%D1%83%D0%B0%D0%BB%D0%B1%D1%83%D1%82%D0%B5.html">&lt;p&gt;Очень часто у пользователей при дуалбуте (установке Windows, а затем Linux) возникают сложности с тем, что время на системах разнится и оно всё время сбивается при переключении с одной системы на другую.&lt;/p&gt;
 
 &lt;p&gt;Я нашёл достаточно быстрое решение для этой проблемы:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sf&lt;/span&gt; /usr/share/zoneinfo/&amp;lt;Country&amp;gt;/&amp;lt;City&amp;gt; /etc/localtime
