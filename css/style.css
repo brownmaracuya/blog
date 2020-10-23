@@ -8,7 +8,8 @@
 .dark {
   /* color: var(--wh);
   background-color: var(--bl); */
-  --bl: #fefffe; --wh: #1f1f20;
+  --bl: #fefffe;
+  --wh: #1f1f20;
   --whiteOnRed: #ea3d3d;
   --footer: #c9c9c9;
 }
@@ -50,12 +51,12 @@ p {
 }
 
 a {
-  color: #47dda3;
+  color: #10893f;
   text-decoration: none;
 }
 
 a:hover {
-  color: #50ac82;
+  color: #95ea9a;
 }
 
 ul,
@@ -190,7 +191,7 @@ ul.section-nav {
   background-color: #161414;
   color: #f7f7f7;
   border-radius: 10px;
-  padding: 30px 15px;
+  padding: 30px 50px;
 }
 ul.section-nav ul {
   list-style-type: none;
@@ -207,12 +208,14 @@ table {
   width: 100%;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 
 td {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 /** Adaptive */
