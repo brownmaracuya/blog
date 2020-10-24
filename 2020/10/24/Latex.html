@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Документы в LaTeX</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+      />
+
+    <link rel="stylesheet" href="/blog/css/normalize.css" />
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/syntax.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/blog/assets/img/apple-touch-icon.png"
+      />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/blog/assets/img/favicon-32x32.png"
+      />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/blog/assets/img/favicon-16x16.png"
+      />
+    <link rel="manifest" href="/blog/assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/blog/assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+      />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+              m[i] =
+                m[i] ||
+                function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                      };
+              m[i].l = 1 * new Date();
+              (k = e.createElement(t)),
+                (a = e.getElementsByTagName(t)[0]),
+                (k.async = 1),
+                (k.src = r),
+                a.parentNode.insertBefore(k, a);
+            })(
+                    window,
+                    document,
+                    "script",
+                    "https://mc.yandex.ru/metrika/tag.js",
+                    "ym"
+                  );
+
+            ym(68432512, "init", {
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                  });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/68432512"
+          style="position: absolute; left: -9999px"
+          alt=""
+          /></div
+        ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <header>
+      <!-- <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        </nav> -->
+    </header>
+
+
+    <!--* Main content of the post -->
+    <main class="container">
+      <!--* Main Title -->
+      <h1 class="content_header">Документы в LaTeX</h1>
+
+      <!--* Taglist -->
+      <ul class="content_tag-list">
+        
+        <li class="tag-list_item">linux</li>
+        
+        <li class="tag-list_item">latex</li>
+        
+      </ul>
+
+      <blockquote>
+  <p><strong>LaTeX</strong> — наиболее популярный набор макрорасширений (или макропакет) системы компьютерной вёрстки TeX, который облегчает набор сложных документов. В типографском наборе системы TeX форматируется традиционно как LAΤΕΧ.</p>
+
+  <p>Важно заметить, что ни один из макропакетов для TeX’а не может расширить возможностей TeX (всё, что можно сделать в LaTeX’е, можно сделать и в TeX’е без расширений), но, благодаря различным упрощениям, использование макропакетов зачастую позволяет избежать весьма изощрённого программирования.</p>
+</blockquote>
+
+<p><strong>LaTeX</strong> - один из моих любимых инструментов для верстки документов. Он отличается от обычного <code class="language-plaintext highlighter-rouge">.doc</code> своей лаконичностью, а также широкими возможностями.</p>
+
+<h2 id="мой-темплейт-для-latex">Мой темплейт для LaTeX</h2>
+<p>Мой темплейт делится на несколько частей:</p>
+<ul>
+  <li>Основной документ</li>
+  <li>Содержание</li>
+</ul>
+
+<p>Сделал я это для того, чтобы не перемешивать подключение и настройку пакетов и верстку вместе с содержанием самого документа. <code class="language-plaintext highlighter-rouge">Содержание.tex</code> подключается в <code class="language-plaintext highlighter-rouge">Основной документ.tex</code>, тем самым отделяя всё визуальное от всего технического. Макет, к слову, я делал полностью под себя сам.</p>
+
+<p>Листинг макета:</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+<span class="c">%  Пакеты</span>
+<span class="k">\usepackage</span><span class="p">{</span>minted, graphicx, tikz, pgfplots<span class="p">}</span>
+
+<span class="c">% Русский язык</span>
+<span class="c">%--------------------------------------</span>
+<span class="k">\usepackage</span><span class="na">[T2A]</span><span class="p">{</span>fontenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[russian]</span><span class="p">{</span>babel<span class="p">}</span>
+<span class="c">%--------------------------------------</span>
+
+<span class="c">% Отступы на странице</span>
+<span class="c">%--------------------------------------</span>
+<span class="k">\usepackage</span><span class="na">[margin=3cm]</span><span class="p">{</span>geometry<span class="p">}</span>
+<span class="c">%% Многоколоночный макет</span>
+<span class="k">\usepackage</span><span class="p">{</span>multicol<span class="p">}</span>
+<span class="c">%--------------------------------------</span>
+
+<span class="c">% Футер и хедер</span>
+<span class="c">%--------------------------------------</span>
+<span class="k">\usepackage</span><span class="p">{</span>fancyhdr<span class="p">}</span>
+<span class="k">\pagestyle</span><span class="p">{</span>fancy<span class="p">}</span>
+<span class="k">\fancyhf</span><span class="p">{}</span>
+<span class="k">\rhead</span><span class="p">{</span>Название документа<span class="p">}</span>
+<span class="k">\lhead</span><span class="p">{</span>Шило Даниил<span class="p">}</span>
+<span class="k">\cfoot</span><span class="p">{</span>Стр. <span class="k">\thepage</span><span class="p">}</span>
+<span class="k">\renewcommand</span><span class="p">{</span><span class="k">\headrulewidth</span><span class="p">}{</span>1pt<span class="p">}</span>
+<span class="k">\renewcommand</span><span class="p">{</span><span class="k">\footrulewidth</span><span class="p">}{</span>1pt<span class="p">}</span>
+<span class="c">%--------------------------------------</span>
+
+
+<span class="c">% Форматирование</span>
+<span class="c">%--------------------------------------</span>
+<span class="c">%% Гиперссылки</span>
+<span class="k">\usepackage</span><span class="p">{</span>hyperref<span class="p">}</span>
+<span class="k">\hypersetup</span><span class="p">{</span>
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+<span class="p">}</span>
+<span class="k">\urlstyle</span><span class="p">{</span>same<span class="p">}</span>
+<span class="c">%% Форматирование параграфов</span>
+<span class="k">\setlength</span><span class="p">{</span><span class="k">\parindent</span><span class="p">}{</span>2em<span class="p">}</span>
+<span class="k">\setlength</span><span class="p">{</span><span class="k">\parskip</span><span class="p">}{</span>1em<span class="p">}</span>
+<span class="c">%% Размещение текста (\begin{flushright}, \begin{flushleft}, \begin{center}</span>
+<span class="k">\usepackage</span><span class="p">{</span>ragged2e<span class="p">}</span>
+<span class="c">%% Делать отступ на первой линии</span>
+<span class="k">\usepackage</span><span class="p">{</span>indentfirst<span class="p">}</span>
+<span class="c">%--------------------------------------</span>
+
+<span class="c">%  Главная информация о авторе</span>
+<span class="c">%--------------------------------------</span>
+<span class="k">\title</span><span class="p">{</span>Название документа<span class="p">}</span>
+<span class="k">\author</span><span class="p">{</span>Шило Даниил<span class="p">}</span>
+<span class="k">\date</span><span class="p">{</span>2020<span class="p">}</span>
+<span class="c">%--------------------------------------</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="k">\maketitle</span>
+<span class="k">\tableofcontents</span>
+<span class="k">\newpage</span><span class="p">{}</span>
+<span class="k">\setcounter</span><span class="p">{</span>page<span class="p">}{</span>1<span class="p">}</span>
+
+<span class="k">\section</span><span class="p">{</span>Начало<span class="p">}</span>
+<span class="c">% BEGIN</span>
+include<span class="p">{</span>content<span class="p">}</span>
+<span class="c">% END</span>
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<p>Как вы уже поняли, файл <code class="language-plaintext highlighter-rouge">content.tex</code> - будет содержать в себе весь текст.</p>
+
+<h2 id="на-чём-можно-писать-latex">На чём можно писать LaTeX?</h2>
+<p>Лично я использую <a href="overleaf.com">Overleaf</a>, поскольку он удобный, быстрый и достаточно гибкий в настройке. Некоторым не нравятся онлайн-сервисы и они используют связку Vim + LaTeX-Suite или Emacs + LaTeX, или VSCode + LaTeX Workshop. На самом деле, вариантов достаточно много, однако я рекомендую именно <em>overleaf</em>, так как он даёт наибольший результат за наименьшее время. Также, у <em>overleaf</em> есть прекрасная <a href="https://www.overleaf.com/learn">справка</a>, с помощью которой я вообще понял что такое LaTeX и научился писать на нём документы.</p>
+</main>
+    <footer class="content_footer">
+      <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
+    </footer>
+
+    <!--* Buttons -->
+    <a href="/blog/index.html">
+      <img
+        class="bttn-home"
+        src="/blog/assets/img/bttn-home.png"
+        alt=""
+        />
+    </a>
+    <img
+      class="bttn-up"
+      onclick="scroll(0, 0);"
+      src="/blog/assets/img/bttn-up.png"
+      alt=""
+      />
+    <img
+      class="bttn-moon"
+      src="/blog/assets/img/bttn-moon.png"
+      alt=""
+      />
+    <!--? Scripts  -->
+    <script src="/blog/js/bttns.js"></script>
+  </body>
+</html>

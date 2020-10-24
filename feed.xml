@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-10-24T02:42:16+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">&amp;gt;_ BrownMaracuya Blog</title><subtitle>Блог веб-разработчика, активного юзера Linux, и просто хорошего парня.</subtitle><entry><title type="html">Браузер для веб-разработки</title><link href="http://localhost:4000/blog/2020/10/24/Browsers.html" rel="alternate" type="text/html" title="Браузер для веб-разработки" /><published>2020-10-24T02:37:00+03:00</published><updated>2020-10-24T02:37:00+03:00</updated><id>http://localhost:4000/blog/2020/10/24/Browsers</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/24/Browsers.html">&lt;p&gt;В наше время браузеров достаточно много. Для веб-разработчиков есть достаточно большой выбор: Google Chrome, Firefox, Firefox Developer Edition, Vivaldi, Chromium.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-10-24T23:23:27+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">&amp;gt;_ BrownMaracuya Blog</title><subtitle>Блог веб-разработчика, активного юзера Linux, и просто хорошего парня.</subtitle><entry><title type="html">Документы в LaTeX</title><link href="http://localhost:4000/blog/2020/10/24/Latex.html" rel="alternate" type="text/html" title="Документы в LaTeX" /><published>2020-10-24T22:43:00+03:00</published><updated>2020-10-24T22:43:00+03:00</updated><id>http://localhost:4000/blog/2020/10/24/Latex</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/24/Latex.html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;LaTeX&lt;/strong&gt; — наиболее популярный набор макрорасширений (или макропакет) системы компьютерной вёрстки TeX, который облегчает набор сложных документов. В типографском наборе системы TeX форматируется традиционно как LAΤΕΧ.&lt;/p&gt;
+
+  &lt;p&gt;Важно заметить, что ни один из макропакетов для TeX’а не может расширить возможностей TeX (всё, что можно сделать в LaTeX’е, можно сделать и в TeX’е без расширений), но, благодаря различным упрощениям, использование макропакетов зачастую позволяет избежать весьма изощрённого программирования.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;LaTeX&lt;/strong&gt; - один из моих любимых инструментов для верстки документов. Он отличается от обычного &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.doc&lt;/code&gt; своей лаконичностью, а также широкими возможностями.&lt;/p&gt;
+
+&lt;h2 id=&quot;мой-темплейт-для-latex&quot;&gt;Мой темплейт для LaTeX&lt;/h2&gt;
+&lt;p&gt;Мой темплейт делится на несколько частей:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Основной документ&lt;/li&gt;
+  &lt;li&gt;Содержание&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Сделал я это для того, чтобы не перемешивать подключение и настройку пакетов и верстку вместе с содержанием самого документа. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Содержание.tex&lt;/code&gt; подключается в &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Основной документ.tex&lt;/code&gt;, тем самым отделяя всё визуальное от всего технического. Макет, к слову, я делал полностью под себя сам.&lt;/p&gt;
+
+&lt;p&gt;Листинг макета:&lt;/p&gt;
+
+&lt;div class=&quot;language-latex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;\documentclass&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[a4paper]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;article&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%  Пакеты&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;minted, graphicx, tikz, pgfplots&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;% Русский язык&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[T2A]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fontenc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[utf8]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;inputenc&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[russian]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;babel&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;% Отступы на странице&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[margin=3cm]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;geometry&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% Многоколоночный макет&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;multicol&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;% Футер и хедер&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\pagestyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;fancy&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\fancyhf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\rhead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Название документа&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\lhead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Шило Даниил&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\cfoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Стр. &lt;span class=&quot;k&quot;&gt;\thepage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\renewcommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\headrulewidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;1pt&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\renewcommand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\footrulewidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;1pt&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;% Форматирование&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% Гиперссылки&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;hyperref&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\hypersetup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\urlstyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;same&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% Форматирование параграфов&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\setlength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\parindent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;2em&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\setlength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;\parskip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;1em&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% Размещение текста (\begin{flushright}, \begin{flushleft}, \begin{center}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;ragged2e&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%% Делать отступ на первой линии&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;indentfirst&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;%  Главная информация о авторе&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Название документа&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Шило Даниил&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;2020&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%--------------------------------------&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;\begin{document}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;\maketitle&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\tableofcontents&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\newpage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;\setcounter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;}{&lt;/span&gt;1&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;\section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;Начало&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;% BEGIN&lt;/span&gt;
+include&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;content&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;% END&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;\end{document}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Как вы уже поняли, файл &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;content.tex&lt;/code&gt; - будет содержать в себе весь текст.&lt;/p&gt;
+
+&lt;h2 id=&quot;на-чём-можно-писать-latex&quot;&gt;На чём можно писать LaTeX?&lt;/h2&gt;
+&lt;p&gt;Лично я использую &lt;a href=&quot;overleaf.com&quot;&gt;Overleaf&lt;/a&gt;, поскольку он удобный, быстрый и достаточно гибкий в настройке. Некоторым не нравятся онлайн-сервисы и они используют связку Vim + LaTeX-Suite или Emacs + LaTeX, или VSCode + LaTeX Workshop. На самом деле, вариантов достаточно много, однако я рекомендую именно &lt;em&gt;overleaf&lt;/em&gt;, так как он даёт наибольший результат за наименьшее время. Также, у &lt;em&gt;overleaf&lt;/em&gt; есть прекрасная &lt;a href=&quot;https://www.overleaf.com/learn&quot;&gt;справка&lt;/a&gt;, с помощью которой я вообще понял что такое LaTeX и научился писать на нём документы.&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="latex" /><summary type="html">LaTeX — наиболее популярный набор макрорасширений (или макропакет) системы компьютерной вёрстки TeX, который облегчает набор сложных документов. В типографском наборе системы TeX форматируется традиционно как LAΤΕΧ. Важно заметить, что ни один из макропакетов для TeX’а не может расширить возможностей TeX (всё, что можно сделать в LaTeX’е, можно сделать и в TeX’е без расширений), но, благодаря различным упрощениям, использование макропакетов зачастую позволяет избежать весьма изощрённого программирования.</summary></entry><entry><title type="html">Браузер для веб-разработки</title><link href="http://localhost:4000/blog/2020/10/24/Browsers.html" rel="alternate" type="text/html" title="Браузер для веб-разработки" /><published>2020-10-24T02:37:00+03:00</published><updated>2020-10-24T02:37:00+03:00</updated><id>http://localhost:4000/blog/2020/10/24/Browsers</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/24/Browsers.html">&lt;p&gt;В наше время браузеров достаточно много. Для веб-разработчиков есть достаточно большой выбор: Google Chrome, Firefox, Firefox Developer Edition, Vivaldi, Chromium.&lt;/p&gt;
+
+&lt;p&gt;Лично я предпочитаю Google Chrome, потому что он достаточно быстрый, умный, хорошо синхронизируется с мобильными устройствами, а также в нём прекрасные инструменты разработчика. Стоит раз попробовать его, как потом сложно будет перейти на какой-то другой браузер.&lt;/p&gt;
+
+&lt;p&gt;Вообще, вся тема с браузерами немного преувеличена, так как по сути все они следуют одному &lt;a href=&quot;https://www.w3.org/standards/&quot;&gt;стандарту&lt;/a&gt; (&lt;em&gt;ну, или стараются ему следовать&lt;/em&gt;). Раньше одним из передовых браузеров был Firefox, но так как Google заняла большую часть рынка смартфонов с андроидов, то и пользователей Google Chrome, стало больше, так как Google Chrome поставляется с андроидом с 2012 года.&lt;/p&gt;
+
+&lt;p&gt;В 2020 году Mozilla (компания, которая сделала Firefox) уволила 25% процентов сотрудников, поэтому c дальнейшим быстрым развитием Firefox, думаю, стоит подождать. Именно поэтому я и советую перейти на Google Chrome.&lt;/p&gt;
+
+&lt;p&gt;Однако, выбор остаётся за каждым и вообще кроме Firefox и Google Chrome есть также и другие браузеры, сейчас я покажу как их установить в Arch Linux:&lt;/p&gt;
 &lt;h2 id=&quot;установка-браузеров-в-arch-linux&quot;&gt;Установка браузеров в Arch Linux&lt;/h2&gt;
 &lt;p&gt;Сейчас установим несколько пакетов в Arch Linux, а также настроим браузеры&lt;/p&gt;
 &lt;h3 id=&quot;google-chrome&quot;&gt;Google Chrome&lt;/h3&gt;
@@ -32,7 +134,7 @@ git clone https://aur.archlinux.org/yay.git
 &lt;h3 id=&quot;chromium&quot;&gt;Chromium&lt;/h3&gt;
 &lt;p&gt;Сразу устанавливаем &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Chromium&lt;/code&gt; с помощью &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pacman&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-Sy&lt;/span&gt; chromium
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="browsers" /><category term="web" /><category term="linux" /><summary type="html">В наше время браузеров достаточно много. Для веб-разработчиков есть достаточно большой выбор: Google Chrome, Firefox, Firefox Developer Edition, Vivaldi, Chromium. Установка браузеров в Arch Linux Сейчас установим несколько пакетов в Arch Linux, а также настроим браузеры Google Chrome Устанавливаем yay (Yet another yogurt) sudo pacman -Sy base-devel git git clone https://aur.archlinux.org/yay.git cd yay &amp;amp;&amp;amp; makepkg -si &amp;amp;&amp;amp; cd - Затем скачиваем и устанавливаем пакет google-chrome yay -Sy google-chrome Firefox Сразу устанавливаем firefox с помощью pacman sudo pacman -Sy firefox Firefox Developer Edition Firefox Developer Edition - браузер, который специально создан разработчиками для разработчиков. Один из моих фаворитов (после Google Chrome), так как потребляет мало ресурсов и предоставляет достаточно удобные инструменты разработчика.</summary></entry><entry><title type="html">Сервисы, которые я очень часто использую</title><link href="http://localhost:4000/blog/2020/10/22/Services.html" rel="alternate" type="text/html" title="Сервисы, которые я очень часто использую" /><published>2020-10-22T23:39:00+03:00</published><updated>2020-10-22T23:39:00+03:00</updated><id>http://localhost:4000/blog/2020/10/22/Services</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/22/Services.html">&lt;p&gt;В наше время люди не могут обойтись без онлайн сервисов. В данном посте я размещу сервисы, которые я использую почти постоянно:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="browsers" /><category term="web" /><category term="linux" /><summary type="html">В наше время браузеров достаточно много. Для веб-разработчиков есть достаточно большой выбор: Google Chrome, Firefox, Firefox Developer Edition, Vivaldi, Chromium.</summary></entry><entry><title type="html">Веб-cервисы, которые я очень часто использую</title><link href="http://localhost:4000/blog/2020/10/22/Services.html" rel="alternate" type="text/html" title="Веб-cервисы, которые я очень часто использую" /><published>2020-10-22T23:39:00+03:00</published><updated>2020-10-22T23:39:00+03:00</updated><id>http://localhost:4000/blog/2020/10/22/Services</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/22/Services.html">&lt;p&gt;В наше время люди не могут обойтись без онлайн сервисов. В данном посте я размещу сервисы, которые я использую почти постоянно:&lt;/p&gt;
 
 &lt;h2 id=&quot;webdevelopment&quot;&gt;WebDevelopment&lt;/h2&gt;
 &lt;ul&gt;
@@ -41,7 +143,7 @@ git clone https://aur.archlinux.org/yay.git
   &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM.js&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/&quot;&gt;BitBucket&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot;&gt;MDN&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/&quot;&gt;MDN&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://codepen.io/&quot;&gt;Codepen&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://jsfiddle.net/&quot;&gt;JSFiddle&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://repl.it/&quot;&gt;Repl.it&lt;/a&gt;&lt;/li&gt;
@@ -60,6 +162,7 @@ git clone https://aur.archlinux.org/yay.git
   &lt;li&gt;&lt;a href=&quot;https://stackedit.io/&quot;&gt;Stackedit&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.notion.so/&quot;&gt;Notion&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://trello.com/&quot;&gt;Trello&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wrike.com/&quot;&gt;Wrike&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;entertainment&quot;&gt;Entertainment&lt;/h2&gt;
@@ -69,6 +172,8 @@ git clone https://aur.archlinux.org/yay.git
   &lt;li&gt;&lt;a href=&quot;https://habr.com/ru/&quot;&gt;Habr&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/index.htm&quot;&gt;tutorialspoint&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/&quot;&gt;geeksforgeeks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.freecodecamp.org/&quot;&gt;FreeCodeCamp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itsfoss.com/&quot;&gt;it’s FOSS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;fonts-and-icons&quot;&gt;Fonts and icons&lt;/h2&gt;
@@ -79,7 +184,36 @@ git clone https://aur.archlinux.org/yay.git
   &lt;li&gt;&lt;a href=&quot;https://learn.javascript.ru/&quot;&gt;learnjs&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://thenounproject.com/&quot;&gt;theNeunProject&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://materialdesignicons.com/&quot;&gt;Material Design Icons&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="web" /><category term="linux" /><summary type="html">В наше время люди не могут обойтись без онлайн сервисов. В данном посте я размещу сервисы, которые я использую почти постоянно:</summary></entry><entry><title type="html">О интернет протоколе</title><link href="http://localhost:4000/blog/2020/10/21/%D0%9E-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5.html" rel="alternate" type="text/html" title="О интернет протоколе" /><published>2020-10-21T14:26:00+03:00</published><updated>2020-10-21T14:26:00+03:00</updated><id>http://localhost:4000/blog/2020/10/21/%D0%9E%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/21/%D0%9E-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5.html">&lt;blockquote&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;стеки&quot;&gt;Стеки&lt;/h1&gt;
+&lt;p&gt;Для определённых дел иногда требуются стеки технологий (совокупность технологий)&lt;/p&gt;
+
+&lt;h2 id=&quot;веб-разработка&quot;&gt;Веб-разработка&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codepen.io/&quot;&gt;Codepen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jsfiddle.net/&quot;&gt;JSFiddle&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://fonts.google.com/&quot;&gt;Google Fonts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/&quot;&gt;MDN&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/&quot;&gt;BitBucket&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;написание-документов&quot;&gt;Написание документов&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.overleaf.com/&quot;&gt;Overleaf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackedit.io/&quot;&gt;Stackedit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/&quot;&gt;Google Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;работа-с-командой&quot;&gt;Работа с командой&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://trello.com/&quot;&gt;Trello&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.notion.so/&quot;&gt;Notion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://repl.it/&quot;&gt;Repl.it&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wrike.com/&quot;&gt;Wrike&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="web" /><summary type="html">В наше время люди не могут обойтись без онлайн сервисов. В данном посте я размещу сервисы, которые я использую почти постоянно:</summary></entry><entry><title type="html">О интернет протоколе</title><link href="http://localhost:4000/blog/2020/10/21/%D0%9E-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5.html" rel="alternate" type="text/html" title="О интернет протоколе" /><published>2020-10-21T14:26:00+03:00</published><updated>2020-10-21T14:26:00+03:00</updated><id>http://localhost:4000/blog/2020/10/21/%D0%9E%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5</id><content type="html" xml:base="http://localhost:4000/blog/2020/10/21/%D0%9E-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%B5.html">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Сетево́й протоко́л&lt;/strong&gt; — набор правил и действий (очерёдности действий), позволяющий осуществлять соединение и обмен данными между двумя и более включёнными в сеть устройствами. (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B8_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85&quot;&gt;Википедия&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 
