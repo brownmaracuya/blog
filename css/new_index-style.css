@@ -63,11 +63,11 @@ a {
 }
 
 .info_image {
-  width: 250px;
-  height: 250px;
-  border: azure 5px solid;
+  width: 225px;
+  height: 225px;
+  border: #2c5646 5px solid;
   border-radius: 50%;
-  background-image: url("/blog/assets/img/pexels-perchek-industrie-5451980.jpg");
+  background-image: url("/blog/assets/img/450x450Image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
