@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Делаем синхронизацию MacOS и IOs на Linux и Anroid</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+      />
+
+    <link rel="stylesheet" href="/blog/css/normalize.css" />
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/syntax.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/blog/assets/img/apple-touch-icon.png"
+      />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/blog/assets/img/favicon-32x32.png"
+      />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/blog/assets/img/favicon-16x16.png"
+      />
+    <link rel="manifest" href="/blog/assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/blog/assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+      />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+              m[i] =
+                m[i] ||
+                function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                      };
+              m[i].l = 1 * new Date();
+              (k = e.createElement(t)),
+                (a = e.getElementsByTagName(t)[0]),
+                (k.async = 1),
+                (k.src = r),
+                a.parentNode.insertBefore(k, a);
+            })(
+                    window,
+                    document,
+                    "script",
+                    "https://mc.yandex.ru/metrika/tag.js",
+                    "ym"
+                  );
+
+            ym(68432512, "init", {
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                  });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/68432512"
+          style="position: absolute; left: -9999px"
+          alt=""
+          /></div
+        ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <header>
+      <!-- <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        </nav> -->
+    </header>
+
+
+    <!--* Main content of the post -->
+    <main class="container">
+      <!--* Main Title -->
+      <h1 class="content_header">Делаем синхронизацию MacOS и IOs на Linux и Anroid</h1>
+
+      <!--* Taglist -->
+      <ul class="content_tag-list">
+        
+        <li class="tag-list_item">linux</li>
+        
+        <li class="tag-list_item">android</li>
+        
+      </ul>
+
+      <p>Недавно изведал для себя утилиту “<em>KDE Connect</em>”. Если, вкратце, то она помогает синхронизировать все Android устройства с Linux + KDE, тем самым давая нам следующие фичи:</p>
+
+<ul>
+  <li>Быстрый обмен файлами</li>
+  <li>Общий буфер обмена (<em>копируете на ПК что-то и можете вставить текст на телефоне и наоборот</em>)</li>
+  <li>Быстрое открытие сайтов на двух устройствах</li>
+  <li>Синхронизация уведомлений</li>
+  <li>Возможность просмотра файлов телефона удалённо</li>
+  <li>Возможность ответа на уведомления телефона удалённо</li>
+  <li>Синхронизация контактной книги телефона</li>
+  <li>Показ заряда батареи</li>
+  <li>Просмотр сообщений</li>
+  <li>Звонок на телефон, дабы найти его</li>
+</ul>
+
+<p>Впечатляет, не правда ли? Сейчас мы научимся это всё устанавливать.</p>
+
+<h2 id="установка-необходимых-компонентов-на-пк">Установка необходимых компонентов на ПК</h2>
+<p>Для начала нам нужно выяснить какой дистрибутив вы используете, это может быть Ubuntu (или её подвиды Kubuntu, Xubuntu, Ubuntu Budgie..),  Debian, Pop_OS, Fedora (или Fedora Spins), Arch Linux (или Manjaro).</p>
+<h3 id="установка-на-ubuntu-или-её-подвиды-debian">Установка на Ubuntu (или её подвиды), Debian</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>kdeconnect
+</code></pre></div></div>
+<p>Данной коммандой устанавливаем KDEConnect в Ubuntu (Debian), а затем переходим к шагу <a href="#установка-необходимых-компонентов-на-android">Установка на смартфон</a>.</p>
+
+<h3 id="установка-на-fedora-fedora-spins">Установка на Fedora (Fedora Spins)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>kdeconnect
+</code></pre></div></div>
+<p>Данной коммандой устанавливаем KDEConnect в Fedora (Fedora Spins), а затем переходим к шагу <a href="#установка-необходимых-компонентов-на-android">Установка на смартфон</a>.</p>
+<h3 id="установка-на-arch-linux-manjaro">Установка на Arch Linux (Manjaro)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-Sy</span> kdeconnect
+</code></pre></div></div>
+<p>Данной коммандой устанавливаем KDEConnect в Arch Linux (Manjaro), а затем переходим к шагу <a href="#установка-необходимых-компонентов-на-android">Установка на смартфон</a>.</p>
+
+<h2 id="установка-необходимых-компонентов-на-android">Установка необходимых компонентов на Android</h2>
+<p>На телефон устанавливаем приложение KDEConnect с помощью <a href="https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp&amp;hl=en_US&amp;gl=US">Google Play</a> или <a href="https://f-droid.org/en/packages/org.kde.kdeconnect_tp/">F-Droid</a>. После этого даём KDEConnect доступ к файлам, звонкам, SMS, календарю.</p>
+
+<p>На ПК тем временем должен выскочить значок KDEConnect
+<img src="/blog/assets/img/Screenshot_20201026_124404.png" alt="Config KDEConnect" /></p>
+
+<p>Нажав на него мы можем настроить подключение к телефону и выбрать плагины, которые нам нужны
+<img src="/blog/assets/img/Screenshot_20201026_124546.png" alt="Plugins KDEConnect" /></p>
+
+<p>Собственно и всё. С этого момента устройства полностью синхронизированы.</p>
+</main>
+    <footer class="content_footer">
+      <p class="index_text">&copy; to Daniil Shilo (@Brownmaracuya)</p>
+    </footer>
+
+    <!--* Buttons -->
+    <a href="/blog/index.html">
+      <img
+        class="bttn-home"
+        src="/blog/assets/img/bttn-home.png"
+        alt=""
+        />
+    </a>
+    <img
+      class="bttn-up"
+      onclick="scroll(0, 0);"
+      src="/blog/assets/img/bttn-up.png"
+      alt=""
+      />
+    <img
+      class="bttn-moon"
+      src="/blog/assets/img/bttn-moon.png"
+      alt=""
+      />
+    <!--? Scripts  -->
+    <script src="/blog/js/bttns.js"></script>
+  </body>
+</html>
